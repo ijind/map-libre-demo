@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/ll_home_container"
+        layout="@layout/biz_layout_map_container" />
+
+    <include layout="@layout/biz_robot_pop_layout" />
+
+    <TextView
+        android:id="@+id/tv_push_state"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_50dp"
+        android:background="@color/commonview_color_F0A712_30"
+        android:gravity="center|bottom"
+        android:text="Push State: "
+        android:textColor="@color/blue_router"
+        android:visibility="gone" />
+
+</FrameLayout>

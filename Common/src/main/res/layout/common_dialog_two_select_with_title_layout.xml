@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="288dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/common_dialog_8_cornel_bg"
+    android:padding="@dimen/dimens_20dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/title_tv"
+        style="@style/CommonView_TV_H2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:txaiFontStyle="txaiBold"
+        android:textColor="@color/commonview_color_3B445C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/commonview_color_3B445C"
+        android:textSize="@dimen/global_text_size_level_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/two_select_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:button_style="multi_button_1"
+        app:positiveText="@string/ok"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content_tv"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

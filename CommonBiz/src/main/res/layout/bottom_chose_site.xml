@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:paddingTop="@dimen/dimens_20dp"
+    android:paddingBottom="@dimen/dimens_20dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_choose_title"
+        style="@style/CommonView_TV_H2"
+        android:text="@string/biz_choose_pick_up_site"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_10dp"
+        android:layout_marginBottom="@dimen/dimens_20dp"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_choose_title">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_2dp"
+            android:src="@drawable/ic_pick_up_location" />
+
+        <ai.txai.common.widget.txaitextview.TxaiTextView
+            android:id="@+id/tv_choose_site_name"
+            style="@style/CommonView_TV_DESC_Black"
+            android:layout_marginStart="@dimen/dimens_8dp"
+            app:txaiFontStyle="txaiBold"
+            app:layout_constraintBottom_toTopOf="@id/iv_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_icon"
+            app:layout_constraintTop_toBottomOf="@id/iv_icon"
+            tools:text="Hilton" />
+
+        <TextView
+            android:id="@+id/tv_choose_site_desc"
+            style="@style/CommonView_TV_DESC_12sp_Gray"
+            android:layout_marginTop="@dimen/dimens_2dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="200dp"
+            app:layout_constraintStart_toStartOf="@id/tv_choose_site_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_choose_site_name"
+            tools:text="description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_choose_search"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:drawableStart="@drawable/biz_ic_search"
+        android:text="@string/biz_search"
+        app:layout_constraintBottom_toBottomOf="@id/cl_site"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cl_site" />
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        app:layout_constraintTop_toBottomOf="@id/cl_site"
+        app:positiveText="@string/biz_confirm_pick_up"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

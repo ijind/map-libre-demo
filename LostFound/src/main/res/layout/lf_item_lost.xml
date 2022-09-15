@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_order_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_all_corner_shape_8"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_14dp"
+    android:paddingEnd="@dimen/dimens_16dp"
+    android:paddingBottom="@dimen/dimens_14dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_taxi_name"
+        style="@style/CommonView_TV_H4"
+        android:text="@string/lf_property_report"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_taxi_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_taxi_name"
+        />
+
+    <TextView
+        android:id="@+id/tv_order_state"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_marginEnd="@dimen/dimens_2dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_more"
+        app:layout_constraintEnd_toStartOf="@id/iv_more"
+        app:layout_constraintTop_toTopOf="@id/iv_more"
+        tools:text="Completed" />
+
+    <TextView
+        android:id="@+id/tv_summary"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_marginTop="@dimen/dimens_12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/commonview_color_3B445C"
+        app:layout_constraintStart_toStartOf="@id/tv_taxi_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_taxi_name"
+        tools:text="12:54 PM, Feb 17, 2022" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_marginTop="@dimen/dimens_12dp"
+        app:layout_constraintStart_toStartOf="@id/tv_summary"
+        app:layout_constraintTop_toBottomOf="@id/tv_summary"
+        tools:text="12:54 PM, Feb 17, 2022" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

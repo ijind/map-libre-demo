@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimens_20dp"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/dimens_20dp">
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_item_type"
+        style="@style/CommonView_TV_H4"
+        app:txaiFontStyle="txaiBold"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        android:text="@string/lf_lost_item_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_select_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        app:layout_constraintTop_toBottomOf="@id/ctv_item_type">
+
+        <TextView
+            android:id="@+id/tv_item_type"
+            style="@style/CommonView_TV_DESC_Black"
+            android:hint="@string/lf_lost_please_select"
+            android:textColorHint="@color/commonview_grey_c3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_item_description"
+        style="@style/CommonView_TV_H4"
+        app:txaiFontStyle="txaiBold"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="@string/lf_lost_item_description"
+        app:layout_constraintStart_toStartOf="@id/cl_select_item"
+        app:layout_constraintTop_toBottomOf="@id/cl_select_item" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_description_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        app:layout_constraintTop_toBottomOf="@id/ctv_item_description">
+
+        <EditText
+            android:id="@+id/tv_description"
+            style="@style/CommonView_TV_DESC_Black"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="@string/lf_lost_description_hint"
+            android:maxLength="1000"
+            android:minHeight="108dp"
+            android:textColorHint="@color/commonview_grey_c3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_total_length"
+            style="@style/CommonView_TV_DESC_14sp_Gray"
+            android:layout_marginTop="@dimen/dimens_6dp"
+            android:text="/1000"
+            android:textColor="@color/commonview_grey_c3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <TextView
+            android:id="@+id/tv_current_length"
+            style="@style/CommonView_TV_DESC_14sp_Gray"
+            android:layout_marginTop="@dimen/dimens_6dp"
+            android:text="0"
+            android:textColor="@color/commonview_grey_c3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_total_length"
+            app:layout_constraintTop_toBottomOf="@id/tv_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_contact_number"
+        style="@style/CommonView_TV_H4"
+        app:txaiFontStyle="txaiBold"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="@string/lf_lost_contact_number"
+        app:layout_constraintStart_toStartOf="@id/cl_select_item"
+        app:layout_constraintTop_toBottomOf="@id/cl_description_content" />
+
+    <ai.txai.common.widget.txaiedittext.AutoSeparationInputView
+        android:id="@+id/asiv_contact_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        app:defaultIsoCode="+971"
+        app:isNeedFlags="false"
+        app:isoShowStyle="outside"
+        app:isoMarginLeft="@dimen/dimens_16dp"
+        app:removeMarginRight="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/ctv_contact_number" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_email_title"
+        style="@style/CommonView_TV_H4"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="@string/lf_lost_email"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toStartOf="@id/cl_select_item"
+        app:layout_constraintTop_toBottomOf="@id/asiv_contact_number" />
+
+
+    <ai.txai.common.widget.txaiedittext.DeleteAbleEditText
+        android:id="@+id/tv_email_input"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:hint="@string/lf_lost_email_input"
+        android:inputType="textWebEmailAddress"
+        android:maxLength="50"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        android:textColorHint="@color/commonview_grey_c3"
+        app:layout_constraintTop_toBottomOf="@id/ctv_email_title" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_order_with_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:paddingStart="@dimen/dimens_10dp"
+        android:paddingTop="@dimen/dimens_16dp"
+        android:paddingEnd="@dimen/dimens_10dp"
+        android:paddingBottom="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_email_input">
+
+        <include
+            android:id="@+id/layout_order_info"
+            layout="@layout/lf_item_order_info" />
+
+        <ai.txai.common.widget.txaiButton.TxaiButton
+            android:id="@+id/btn_change_trip"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            app:button_level="level_2"
+            app:button_type="negative_button"
+            android:layout_marginTop="@dimen/dimens_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_order_info"
+            app:negativeText="@string/lf_lost_change_trip" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

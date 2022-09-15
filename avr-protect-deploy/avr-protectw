@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# set -ex
+
+error() {
+    echo $ESCAPE ${C}[ ${P}`date +"%H:%M:%S"` ${R}- ${C}] ${R}"$@"${D}
+}
+execute() {
+    echo $ESCAPE ${C}[ ${P}`date +"%H:%M:%S"` ${G}$ ${C}] ${G}"$@"${D}
+    "$@"
+    RETURN_CODE=$?
+    [ "$RETURN_CODE" != 0 ] && exit $RETURN_CODE
+}
+realpath() {
+    # python -c "import os,sys; print os.path.realpath(sys.argv[1])" "$1"
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+BASE_DIR=$(cd $(dirname $0); pwd)
+
+params=$@
+report=0
+
+while [ $# -gt 0 ];
+do
+   case $1 in
+    -o) output=$2
+        shift
+        ;;
+    -report) report=1
+        shift
+        ;;
+    esac
+    shift
+done
+
+# check python evn
+if [ ${report} -eq 1 ];then
+
+    VENV_DIR=${VENV_DIR:-$(realpath "${BASE_DIR}/venv")}
+    if [ ! -d "${VENV_DIR}" ]; then
+        error "python virtual env not found."
+        exit $ERROR_INTERNAL_ERROR
+    fi
+    export PATH="${VENV_DIR}"/bin:$PATH
+
+fi
+
+report_dir=${output%/*}
+
+execute java -jar ${BASE_DIR}/avr-protect.jar ${params}
+
+# generate report
+if [ ${report} -eq 1 ];then
+
+    execute ${BASE_DIR}/report-tool -i ${report_dir}/report.md -o ${report_dir}/report.pdf
+    execute rm -rf ${report_dir}/report.md
+fi

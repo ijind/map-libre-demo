@@ -1,0 +1,45 @@
+plugins {
+    id 'com.android.library'
+    id 'org.greenrobot.greendao'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    greendao {
+        schemaVersion 3
+        daoPackage 'ai.txai.greendao'
+        targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // https://mvnrepository.com/artifact/org.greenrobot/greendao
+    api 'org.greenrobot:greendao:3.3.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'net.zetetic:android-database-sqlcipher:4.5.0'
+
+}

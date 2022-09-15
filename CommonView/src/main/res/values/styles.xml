@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CommonView_TV_H1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/commonview_black_normal</item>
+        <item name="android:textSize">@dimen/dimens_24sp</item>
+    </style>
+
+    <style name="CommonView_TV_H2" parent="CommonView_TV_H1">
+        <item name="android:textSize">@dimen/dimens_20sp</item>
+    </style>
+
+    <style name="CommonView_TV_H3" parent="CommonView_TV_H1">
+        <item name="android:textSize">@dimen/dimens_18sp</item>
+    </style>
+
+    <style name="CommonView_TV_H4" parent="CommonView_TV_H1">
+        <item name="android:textSize">@dimen/dimens_16sp</item>
+    </style>
+
+    <style name="CommonView_TV_H5" parent="CommonView_TV_H1">
+        <item name="android:textSize">@dimen/dimens_14sp</item>
+    </style>
+
+
+    <style name="CommonView_TV_34SP" parent="CommonView_TV_H1">
+        <item name="android:textSize">@dimen/dimens_34sp</item>
+    </style>
+
+    <style name="CommonView_TV_DESC">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+
+    <style name="CommonView_Tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CommonView_TV_DESC_Gray" parent="CommonView_Tv">
+        <item name="android:textColor">@color/commonview_grey_99</item>
+        <item name="android:textSize">@dimen/global_text_size_level_5</item>
+    </style>
+
+    <style name="CommonView_TV_DESC_Black" parent="CommonView_Tv">
+        <item name="android:textColor">@color/commonview_color_040818</item>
+        <item name="android:textSize">@dimen/global_text_size_level_5</item>
+    </style>
+
+    <style name="CommonView_TV_DESC_Black_Medium" parent="CommonView_TV_DESC_Black">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="CommonView_TV_DESC_14sp_Gray" parent="CommonView_Tv">
+        <item name="android:textColor">@color/commonview_grey_99</item>
+        <item name="android:textSize">@dimen/global_text_size_level_6</item>
+    </style>
+
+    <style name="CommonView_TV_DESC_14sp_Black" parent="CommonView_Tv">
+        <item name="android:textColor">@color/commonview_color_040818</item>
+        <item name="android:textSize">@dimen/global_text_size_level_6</item>
+    </style>
+
+    <style name="CommonView_TV_DESC_12sp_Gray" parent="CommonView_Tv">
+        <item name="android:textColor">@color/commonview_grey_99</item>
+        <item name="android:textSize">@dimen/global_text_size_level_7</item>
+    </style>
+
+    <style name="CommonView_TV_DESC_12sp_Gray_C3" parent="CommonView_Tv">
+        <item name="android:textColor">@color/commonview_grey_c3</item>
+        <item name="android:textSize">@dimen/global_text_size_level_7</item>
+    </style>
+
+    <style name="CommonView_TV_DESC_12sp_White" parent="CommonView_Tv">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/global_text_size_level_7</item>
+    </style>
+
+
+    <style name="CommonView_TV_DESC_12sp_Black" parent="CommonView_Tv">
+        <item name="android:textColor">@color/commonview_color_040818</item>
+        <item name="android:textSize">@dimen/global_text_size_level_7</item>
+    </style>
+
+    <style name="CommonView_one_Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimens_0.5dp</item>
+        <item name="android:layout_marginStart">@dimen/dimens_16dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimens_16dp</item>
+        <item name="android:background">@color/commonview_grey_eb</item>
+    </style>
+
+    <style name="CommonView_one_Line_vertical">
+        <item name="android:layout_width">@dimen/dimens_0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/dimens_6dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimens_6dp</item>
+        <item name="android:background">@color/commonview_grey_99</item>
+
+    </style>
+
+    <style name="CommonView_one_Line_without_margin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimens_0.5dp</item>
+        <item name="android:background">@color/commonview_grey_eb</item>
+    </style>
+</resources>

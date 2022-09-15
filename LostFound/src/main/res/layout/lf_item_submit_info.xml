@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_order_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimens_20dp"
+    android:background="@drawable/commonview_all_corner_shape_8"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_14dp"
+    android:paddingEnd="@dimen/dimens_16dp"
+    android:paddingBottom="@dimen/dimens_14dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_submit_title"
+        style="@style/CommonView_TV_H4"
+        android:text="@string/lf_detail_submit_info_title"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_item_type_title"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="@string/lf_lost_item_type"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctv_submit_title" />
+
+    <TextView
+        android:id="@+id/tv_item_type_content"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        app:layout_constraintBottom_toBottomOf="@id/tv_item_type_title"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/tv_item_type_title"
+        tools:text="Phone" />
+
+    <TextView
+        android:id="@+id/tv_item_description_title"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:text="@string/lf_lost_item_description"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_type_title" />
+
+    <TextView
+        android:id="@+id/tv_item_description_content"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/tv_item_description_title"
+        tools:text="iphone13 pro max, white, xxxx text text, iphone13 pro max, white, xxxx text text" />
+
+
+    <TextView
+        android:id="@+id/tv_contact_title"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:text="@string/lf_lost_contact_number"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_description_content" />
+
+    <TextView
+        android:id="@+id/tv_contact_content"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/tv_contact_title"
+        tools:text="+971 111111111" />
+
+    <TextView
+        android:id="@+id/tv_email_title"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:text="@string/lf_lost_email"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_contact_title" />
+
+    <TextView
+        android:id="@+id/tv_email_content"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/tv_email_title"
+        tools:text="test@gmail.com" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

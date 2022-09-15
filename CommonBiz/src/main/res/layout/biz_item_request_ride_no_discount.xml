@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_amount"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_marginStart="@dimen/dimens_4dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0.00"
+
+        />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_amount_currency"
+        style="@style/CommonView_TV_DESC_12sp_Black"
+        android:layout_marginStart="@dimen/dimens_8dp"
+        android:layout_marginEnd="@dimen/dimens_4dp"
+        android:layout_marginBottom="@dimen/dimens_1dp"
+        android:text="AED"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_amount"
+        app:layout_constraintEnd_toStartOf="@id/tv_amount" />
+
+    <TextView
+        android:id="@+id/tv_sign"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        android:layout_marginStart="@dimen/dimens_6dp"
+        android:layout_marginEnd="@dimen/dimens_4dp"
+        android:text="@string/biz_est"
+        app:layout_constraintBottom_toBottomOf="@id/tv_amount_currency"
+        app:layout_constraintEnd_toStartOf="@id/tv_amount_currency" />
+
+
+    <ImageView
+        android:id="@+id/iv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="@dimen/dimens_8dp"
+        android:paddingEnd="@dimen/dimens_4dp"
+        android:paddingBottom="2dp"
+        android:src="@drawable/ic_question_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sign"
+        app:layout_constraintEnd_toStartOf="@id/tv_sign" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

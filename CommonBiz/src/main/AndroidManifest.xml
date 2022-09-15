@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ai.txai.commonbiz">
+
+    <application>
+        <activity
+            android:name=".main.MainV2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".search.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".search.SearchInMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.RequestRideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.PendingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.ArrivedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.ArrivingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.ChargingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.FinishedActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.CompleteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.CancelActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.TripListActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+</manifest>

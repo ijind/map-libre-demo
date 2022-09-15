@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimens_20dp">
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="@dimen/dimens_24dp"
+        android:layout_height="@dimen/dimens_24dp"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:background="@drawable/commonview_number_bg"
+        android:gravity="center"
+        android:textColor="@color/commonview_color_F0A712"
+        android:textSize="@dimen/dimens_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/notice"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_width="match_parent"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:textColor="@color/commonview_color_3B445C"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Please sit in the back seat and fasten your seat belt" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

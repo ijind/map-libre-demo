@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_order_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_all_corner_shape_8"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_14dp"
+    android:paddingEnd="@dimen/dimens_16dp"
+    android:paddingBottom="@dimen/dimens_14dp">
+
+    <View
+        android:id="@+id/line1"
+        style="@style/CommonView_one_Line_vertical"
+        android:layout_width="@dimen/dimens_1dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_process"
+        app:layout_constraintEnd_toEndOf="@id/iv_pending"
+        app:layout_constraintStart_toStartOf="@id/iv_pending"
+        app:layout_constraintTop_toTopOf="@id/iv_pending" />
+
+
+    <View
+        android:id="@+id/line2"
+        style="@style/CommonView_one_Line_vertical"
+        android:layout_width="@dimen/dimens_1dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_complete"
+        app:layout_constraintEnd_toEndOf="@id/iv_pending"
+        app:layout_constraintStart_toStartOf="@id/iv_pending"
+        app:layout_constraintTop_toTopOf="@id/iv_process" />
+
+    <ImageView
+        android:id="@+id/iv_pending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_process_ed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_pending"
+        style="@style/CommonView_TV_H4"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_pending"
+        app:layout_constraintStart_toEndOf="@id/iv_pending"
+        app:layout_constraintTop_toTopOf="@id/iv_pending"
+        android:text="@string/lf_status_pending" />
+
+    <TextView
+        android:id="@+id/tv_pending_time"
+        style="@style/CommonView_TV_DESC_12sp_Gray_C3"
+        android:layout_marginTop="@dimen/dimens_4dp"
+        app:layout_constraintStart_toStartOf="@id/ctv_pending"
+        app:layout_constraintTop_toBottomOf="@id/ctv_pending"
+        tools:text="10:00 PM, 20 Feb, 2022" />
+
+
+    <ImageView
+        android:id="@+id/iv_process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:src="@mipmap/ic_process_ed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_pending" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_process"
+        style="@style/CommonView_TV_H4"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_process"
+        app:layout_constraintStart_toEndOf="@id/iv_process"
+        app:layout_constraintTop_toTopOf="@id/iv_process"
+        android:text="@string/lf_status_processing" />
+
+    <TextView
+        android:id="@+id/tv_process_time"
+        style="@style/CommonView_TV_DESC_12sp_Gray_C3"
+        android:layout_marginTop="@dimen/dimens_4dp"
+        app:layout_constraintStart_toStartOf="@id/ctv_process"
+        app:layout_constraintTop_toBottomOf="@id/ctv_process"
+        tools:text="10:00 PM, 20 Feb, 2022" />
+
+    <ImageView
+        android:id="@+id/iv_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:src="@mipmap/ic_process_ing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_process" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_complete"
+        style="@style/CommonView_TV_H4"
+        android:textColor="@color/commonview_orange_00"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintBottom_toBottomOf="@id/iv_complete"
+        app:layout_constraintStart_toEndOf="@id/iv_complete"
+        app:layout_constraintTop_toTopOf="@id/iv_complete"
+        android:text="@string/lf_status_complete" />
+
+    <TextView
+        android:id="@+id/tv_complete_time"
+        style="@style/CommonView_TV_DESC_12sp_Gray_C3"
+        android:layout_marginTop="@dimen/dimens_4dp"
+        app:layout_constraintStart_toStartOf="@id/ctv_complete"
+        app:layout_constraintTop_toBottomOf="@id/ctv_complete"
+        tools:text="10:00 PM, 20 Feb, 2022" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

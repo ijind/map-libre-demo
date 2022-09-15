@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <FrameLayout
+        android:id="@+id/mapViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:id="@+id/ll_default_site_sign"
+        layout="@layout/item_site_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_selected_site_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_point_pick_up"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/person_center"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="@dimen/dimens_12dp"
+        android:layout_marginTop="@dimen/dimens_51dp"
+        android:background="@drawable/commonview_oval_bg"
+        android:elevation="4dp"
+        android:padding="9dp"
+        android:src="@drawable/commonbiz_ic_person_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/customer_service"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="@dimen/dimens_51dp"
+        android:layout_marginEnd="@dimen/dimens_12dp"
+        android:background="@drawable/commonview_oval_bg"
+        android:elevation="4dp"
+        android:padding="9dp"
+        android:src="@mipmap/biz_ic_customer_service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/current_location"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cl_progress_container"
+        android:layout_marginEnd="@dimen/common_margin_to_screen_side"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/commonview_all_corner_shape_8"
+        android:elevation="4dp"
+        android:padding="@dimen/dimens_7dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_current_location" />
+
+    <ImageView
+        android:id="@+id/question"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="@dimen/common_margin_to_screen_side"
+        android:layout_marginBottom="@dimen/common_margin_to_screen_side"
+        android:background="@drawable/commonview_all_corner_shape_8"
+        android:elevation="4dp"
+        android:padding="@dimen/dimens_7dp"
+        android:src="@drawable/ic_question"
+        app:layout_constraintBottom_toTopOf="@id/current_location"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/dialog_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:translationY="-10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_card_shadow"
+        app:layout_constraintTop_toTopOf="@id/dialog_container"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_container"/>
+
+    <FrameLayout
+        android:id="@+id/dialog_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dimens_5dp"
+        android:outlineProvider="background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@android:color/transparent"/>
+
+    <ai.txai.common.widget.shadow.ShadowContainer
+        android:id="@+id/cl_progress_container"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        app:containerDeltaLength="@dimen/dimens_5dp"
+        app:containerCornerRadius="@dimen/dimens_8dp"
+        app:containerShadowRadius="@dimen/dimens_5dp"
+        app:deltaY="-3dp"
+        android:visibility="gone"
+        app:containerShadowColor="@color/commonview_black_10"
+        app:layout_constraintBottom_toTopOf="@id/dialog_container"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_in_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/commonview_all_corner_shape_8"
+            android:paddingStart="@dimen/dimens_16dp"
+            android:paddingTop="@dimen/dimens_7dp"
+            android:paddingEnd="@dimen/dimens_16dp"
+            android:paddingBottom="@dimen/dimens_7dp">
+
+            <ImageView
+                android:id="@+id/iv_in_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/biz_ic_in_progress" />
+
+            <TextView
+                style="@style/CommonView_TV_DESC_14sp_Black"
+                android:layout_marginStart="@dimen/dimens_10dp"
+                android:text="@string/biz_have_a_trip_in_progress"
+                app:layout_constraintBottom_toBottomOf="@id/iv_in_progress"
+                app:layout_constraintStart_toEndOf="@id/iv_in_progress"
+                app:layout_constraintTop_toTopOf="@id/iv_in_progress" />
+
+            <ai.txai.common.widget.txaiButton.TxaiButton
+                android:layout_width="@dimen/dimens_64dp"
+                android:layout_height="wrap_content"
+                app:button_level="level_3"
+                app:positiveText="View"
+                android:clickable="false"
+                app:layout_constraintBottom_toBottomOf="@id/iv_in_progress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_in_progress"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ai.txai.common.widget.shadow.ShadowContainer>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

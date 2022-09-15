@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hex transparency
+       100% — FF
+       95% — F2
+       90% — E6
+       87% — DE
+       85% — D9
+       80% — CC
+       75% — BF
+       70% — B3
+       65% — A6
+       60% — 99
+       55% — 8C
+       54% — 8A
+       50% — 80
+       45% — 73
+       40% — 66
+       35% — 59
+       30% — 4D
+       26% — 42
+       25% — 40
+       22% — 39
+       21% — 36
+       20% — 33
+       15% — 26
+       14% — 24
+       13% －21
+       12% — 1F
+       10% — 1A
+       5% — 0D
+       0% — 00
+   -->
+
+    <color name="primary">#FCBF00</color>
+    <color name="transparent">#00000000</color>
+    <color name="primaryDark">#FCBF00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="pink">#ee4e8b</color>
+    <color name="green">#33c377</color>
+    <color name="blue">#1E8CAB</color>
+    <color name="red">#f74e4e</color>
+    <color name="simi_transparent_blue">#334264fb</color>
+    <color name="black">#000000</color>
+    <color name="blue_origin">#0000FF</color>
+    <color name="blue_router">#6D90E5</color>
+
+    <!--   90透明度  -->
+    <color name="commonview_black_90">#CC040818</color>
+    <color name="commonview_black_10">#1A040818</color>
+    <color name="commonview_black_20">#33040818</color>
+
+    <color name="commonview_grey_eb_40">#66E4E7EB</color>
+
+    <color name="commonview_black_normal">#040818</color>
+    <color name="commonview_black_28">#282828</color>
+    <color name="commonview_black_27">#1E1E27</color>
+    <color name="commonview_grey_c3">#B9BEC3</color>
+    <color name="commonview_orange_00">#FCBF00</color>
+    <color name="commonview_grey_eb">#E4E7EB</color>
+    <color name="commonview_grey_dd">#DDDDDD</color>
+    <color name="commonview_grey_99">#888B99</color>
+    <color name="commonview_grey_f6">#F6F6F6</color>
+    <color name="commonview_color_FAFAFA">#FAFAFA</color>
+    <color name="commonview_color_fffaef">#FFFAEF</color>
+    <color name="commonview_color_F0A712">#F0A712</color>
+    <color name="commonview_color_3B445C">#3B445C</color>
+    <color name="commonview_color_040818">#040818</color>
+    <color name="commonview_color_FA5909">#FA5909</color>
+    <color name="commonview_color_FF4D4C">#FF4D4C</color>
+    <color name="commonview_color_17A800">#17A800</color>
+    <color name="commonview_color_13D59B">#13D59B</color>
+
+    <color name="commonview_color_040818_70">#B3040818</color>
+
+    <color name="commonview_color_F0A712_30">#4DF0A712</color>
+    <color name="commonview_color_CB9502_50">#80CB9502</color>
+</resources>

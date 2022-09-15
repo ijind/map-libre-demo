@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/dimens_10dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+
+    <ImageView
+        android:id="@+id/iv_car_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/biz_ic_white_body_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_vehicle_model"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_car_body" />
+
+    <TextView
+        android:id="@+id/tv_base_fare_title"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_32dp"
+        android:text="@string/biz_order_base_fare_title"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_vehicle_model" />
+
+
+    <TextView
+        android:id="@+id/tv_base_fare_description"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        android:layout_marginTop="@dimen/dimens_2dp"
+        android:text="@string/biz_order_base_mileage_title"
+        app:layout_constraintStart_toStartOf="@id/tv_base_fare_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_base_fare_title" />
+
+
+    <TextView
+        android:id="@+id/tv_base_fare_distance"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        android:layout_marginTop="@dimen/dimens_2dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/tv_base_fare_description"
+        tools:text="@string/biz_order_base_mileage_title" />
+
+    <TextView
+        android:id="@+id/tv_base_fare_amount"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/tv_base_fare_title"
+        tools:text="AED 14.00" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/CommonView_one_Line_without_margin"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_base_fare_amount"
+        app:layout_constraintStart_toStartOf="@id/tv_base_fare_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_base_fare_description" />
+
+
+    <TextView
+        android:id="@+id/tv_per_km_title"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="@string/biz_order_per_km_title"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+
+    <TextView
+        android:id="@+id/tv_per_km_price"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/tv_per_km_title"
+        tools:text="AED 4.20/km" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

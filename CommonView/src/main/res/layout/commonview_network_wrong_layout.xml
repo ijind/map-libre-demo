@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <ImageView
+        android:id="@+id/no_network_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_without_network"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top" />
+
+    <TextView
+        android:id="@+id/no_network_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/commonview_no_network_prompt"
+        android:textColor="@color/commonview_black_normal"
+        android:textSize="@dimen/global_text_size_level_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/no_network_ic" />
+
+    <TextView
+        android:id="@+id/try_again_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/commonview_try_again"
+        android:textColor="@color/commonview_color_3B445C"
+        android:textSize="@dimen/global_text_size_level_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/no_network_tv" />
+
+    <TextView
+        android:id="@+id/refresh_tv"
+        android:layout_width="120dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:background="@drawable/commonview_btn_orange_stroke_bg"
+        android:gravity="center"
+        android:text="@string/commonview_refresh"
+        android:textColor="@color/commonview_orange_00"
+        android:textSize="@dimen/global_text_size_level_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/try_again_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

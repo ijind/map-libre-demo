@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/title_tv"
+        style="@style/CommonView_TV_H1"
+        android:text="@string/feedback_report"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/choose_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:text="@string/feedback_choose_category"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        app:layout_constraintTop_toBottomOf="@id/title_tv"
+        app:layout_constraintStart_toStartOf="@id/title_tv"/>
+
+    <View
+        android:id="@+id/space_holder_view"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        app:layout_constraintTop_toBottomOf="@id/choose_tv"
+        android:background="@android:color/transparent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/commonview_bg_with_arraw"
+    android:paddingStart="12dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="14dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/est_distance"
+        style="@style/CommonView_TV_DESC_12sp_Black"
+        android:textColor="@color/commonview_orange_00"
+        app:txaiFontStyle="txaiBold"
+        android:textSize="@dimen/global_text_size_level_7" />
+
+    <TextView
+        style="@style/CommonView_TV_DESC_12sp_Black"
+        android:layout_marginStart="@dimen/dimens_2dp"
+        android:text="@string/biz_away"
+        android:textSize="@dimen/global_text_size_level_7" />
+
+    <View
+        style="@style/CommonView_one_Line_vertical"
+        android:layout_height="@dimen/dimens_18dp" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/est_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:txaiFontStyle="txaiBold"
+        android:textColor="@color/commonview_orange_00"
+        android:textSize="@dimen/global_text_size_level_7"
+        tools:text="5 mins" />
+</LinearLayout>

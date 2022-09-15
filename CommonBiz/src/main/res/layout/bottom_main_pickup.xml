@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/commonview_corner_shape_15"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimens_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimens_10dp"
+            android:layout_marginTop="@dimen/dimens_5dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimens_10dp"
+                android:src="@mipmap/ic_car_pick_up_logo" />
+
+            <ai.txai.common.widget.txaitextview.TxaiTextView
+                style="@style/CommonView_TV_H2"
+                app:txaiFontStyle="txaiBold"
+                android:text="@string/biz_welcome_pick_up" />
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/pick_up_select"
+            layout="@layout/item_pickup" />
+
+        <include
+            android:id="@+id/drop_off_select"
+            layout="@layout/item_drop_off_edit" />
+    </LinearLayout>
+</LinearLayout>

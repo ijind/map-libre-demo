@@ -1,0 +1,23 @@
+#this file use for vmp detect range, methods refer packages in this file show be detected.
+Ljava/io/reactivex/rxjava3/*
+Ljava/net/*
+Ljava/security/*
+Ljavax/crypto/*
+Ljavax/net/*
+Lokhttp3/*
+Lcom/aliyun/*
+Lcom/android/volley/*
+Lcom/jdpaysdk/*
+Lcom/sun/mail/*
+Lcom/webank/*
+Lcom/qiniu/android/*
+Lde/measite/minidns/*
+Lme/jessyan/retrofiturlmanager/*
+Lorg/android/spdy/*
+Lorg/bouncycastle/*
+Lorg/java_websocket/*
+Lorg/jivesoftware/smack/*
+Lorg/jivesoftware/smackx/*
+Lorg/nanohttpd/*
+Lretrofit/*
+Lretrofit2/*

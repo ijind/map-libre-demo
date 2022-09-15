@@ -1,0 +1,46 @@
+/*
+ * Copyright 2019 zhaoyuntao
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package ai.txai.common.permission.notify.listener;
+
+import ai.txai.common.permission.Action;
+import ai.txai.common.permission.Rationale;
+
+/**
+ * Created by zhaoyuntao on 2/14/19.
+ */
+public interface ListenerRequest {
+
+    /**
+     * Set request rationale.
+     */
+    ListenerRequest rationale(Rationale<Void> rationale);
+
+    /**
+     * Action to be taken when all permissions are granted.
+     */
+    ListenerRequest onGranted(Action<Void> granted);
+
+    /**
+     * Action to be taken when all permissions are denied.
+     */
+    ListenerRequest onDenied(Action<Void> denied);
+
+    /**
+     * Start install.
+     */
+    void start();
+
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dimens_10dp"
+    android:paddingBottom="@dimen/dimens_20dp">
+
+    <include
+        android:id="@+id/pm_debit_card"
+        layout="@layout/payment_card_item_layout"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_debit_card_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/add_new_card"
+            layout="@layout/payment_card_item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_60dp"
+            android:layout_marginStart="@dimen/dimens_20dp" />
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/pm_payby"
+        layout="@layout/payment_card_item_layout"
+        android:visibility="gone" />
+
+</LinearLayout>

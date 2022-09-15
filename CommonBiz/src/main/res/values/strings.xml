@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="biz_edit_profile">Edit Profile</string>
+    <string name="biz_my_trip">My Trips</string>
+    <string name="biz_service_and_helper">Service and Help</string>
+    <string name="biz_feedback">Feedback</string>
+    <string name="biz_settings">Setting</string>
+
+    <string name="biz_welcome_pick_up">Hi, TXAI at your service!</string>
+    <string name="biz_pick_up_at">Pick up at</string>
+
+    <string name="biz_service_detail_title">Service Details</string>
+    <string name="biz_service_area">Operation Area:</string>
+    <string name="biz_service_hours">Operation Hours:</string>
+
+    <string name="biz_area_service_notice">More areas and stations will be opened in the future, please stay tuned</string>
+
+    <string name="biz_order_base_fare_title">Base Fare</string>
+    <string name="biz_order_per_km_title">Per Kilometer</string>
+    <string name="biz_order_base_mileage">Distance included: %s</string>
+    <string name="biz_order_base_mileage_title">Distance included</string>
+    <string name="biz_order_mileage_title">Mileage Fee</string>
+    <string name="biz_order_mileage_description">Distance: %s</string>
+    <string name="biz_order_number_title">Order No.</string>
+    <string name="biz_order_payment_title">Payment</string>
+    <string name="biz_order_payment_method_title">Payment method</string>
+    <string name="biz_order_payment_time_title">Payment time</string>
+    <string name="biz_order_payment_method_default">Payby</string>
+    <string name="biz_order_check_fare_breakdown">Check fare breakdown</string>
+    <string name="biz_order_fare_breakdown_title">Fare Breakdown</string>
+    <string name="biz_order_pay_now">Pay Now</string>
+    <string name="biz_order_receipt_details">Receipt details</string>
+
+    <string name="biz_trip_complete_title">Trip completed</string>
+    <string name="biz_trip_cancel_title">Trip cancelled</string>
+    <string name="biz_trip_helper_title">Helper</string>
+    <string name="biz_choose_pick_up_site">Choose pick up point</string>
+    <string name="biz_choose_drop_off_site">Choose drop off point</string>
+    <string name="biz_search">Search</string>
+    <string name="biz_confirm_pick_up">Confirm pick up</string>
+    <string name="biz_confirm_drop_off">Confirm drop off</string>
+    <string name="biz_choose_on_map">Choose on map</string>
+
+    <string name="biz_second_cancel_notice">Thank you for waiting.</string>
+    <string name="biz_second_cancel_notice_1">Robotaxi will arrive soon~</string>
+    <string name="biz_second_btn_cancel">Cancel Trip</string>
+    <string name="biz_second_btn_keep_calling">Keep Calling</string>
+    <string name="biz_second_btn_keep_waiting">Keep Waiting</string>
+    <string name="biz_second_btn_keep_using">Keep Using</string>
+    <string name="biz_waiting_notice">Calling a Txai for you</string>
+    <string name="biz_waiting_queue">In the queue</string>
+
+
+    <string name="biz_txai_arriving_title">Meet at the pickup point</string>
+    <string name="biz_txai_arriving_description">The nearby Txai have been matched for you, please go to the %s station to start your trip.</string>
+
+    <string name="biz_txai_arrived_title">Meet at the pickup point</string>
+    <string name="biz_txai_arrived_notice">Txai has arrived</string>
+    <string name="biz_txai_arrived_description">Please wear a mask and go to the %s station. If the Txai does not start the trip within 15 mins after arriving at the station, the order will be automatically cancelled.</string>
+
+    <string name="biz_txai_carry_title">Heading to the destination</string>
+    <string name="biz_txai_carry_description">Please fasten your seat belt and wear a mask. Do not touch the self-driving car sensors and do not talk to the safety officer.</string>
+
+
+    <string name="biz_txai_finish_title">Payment</string>
+    <string name="biz_txai_finish_description">The trip has ended, please pay the fee.</string>
+    <string name="biz_txai_receipt_details">Receipt Details</string>
+    <string name="biz_txai_estimated_fare">Estimated Fare</string>
+
+    <string name="biz_robot_text">Special offer for trial operation: During the trial operation, all trips on RoboTaxi are free!</string>
+
+
+    <string name="biz_precautions_title">Precautions for riding the TXAI self-driving car</string>
+    <string name="biz_precautions_item_1">Please sit in the back seat and fasten your seat belt</string>
+    <string name="biz_precautions_item_2">Before starting the vehicle, please check that seat belts are fastened and doors are closed</string>
+    <string name="biz_precautions_item_3">Please do not touch any sensors</string>
+    <string name="biz_precautions_item_4">Please do not talk to the safety officer</string>
+    <string name="biz_precautions_item_5">Please wear a face cover or mask</string>
+    <string name="biz_precautions_item_6">Please take care of your belongings and do not leave them behind</string>
+
+    <string name="biz_ui_order_status_in_progress">In Progress</string>
+    <string name="biz_ui_order_status_completed">Completed</string>
+    <string name="biz_ui_order_status_cancelled">Cancelled</string>
+    <string name="biz_ui_order_status_unpaid">Unpaid</string>
+    <string name="biz_trip_estimated_fare_notice">Estimated Fare is based on real-time traffice conditions, estimated distance and other factors. Actual fare and tolls incurred may vary</string>
+
+    <string name="biz_waiting_timeout_notice">There are currently no vehicles available, do you want to continue to wait?</string>
+    <string name="biz_waiting_cancel_notice">Thank you for waiting.</string>
+    <string name="biz_waiting_cancel_notice_1">Txai will arrive soon~</string>
+    <string name="biz_arrived_cancel_notice">%s has arrived.</string>
+    <string name="biz_arrived_cancel_notice_1">Confirm cancel the trip?</string>
+    <string name="biz_arriving_cancel_notice">%s is about to arrive.</string>
+    <string name="biz_arriving_cancel_notice_1">Confirm cancel the trip?</string>
+
+    <string name="biz_aed_with_amount">AED %s</string>
+    <string name="biz_per_mil_aed_with_amount">AED %s/km</string>
+    <string name="biz_pickup_and_dropoff_cannot_same">The pick-up point and drop-off point cannot be the same</string>
+
+    <string name="biz_search_drop_off">Search drop off point</string>
+    <string name="biz_search_pick_up">Search pick up point</string>
+    <string name="biz_all_site_title">Recommended Station</string>
+    <string name="biz_no_available_station">No available station nearby</string>
+    <string name="biz_have_a_trip_in_progress">You have a trip in progress</string>
+    <string name="biz_no_available_vehicle">No available vehicle nearby</string>
+    <string name="biz_est">Est.</string>
+    <string name="biz_no_trip_between_sites">There is no line between this point and the selected pick-up/drop-off point, please choose another point</string>
+    <string name="biz_no_trip_available_vehicle">There are currently no vehicles available, please try again later</string>
+    <string name="biz_lost_and_found_title">Lost and Found</string>
+    <string name="biz_lost_and_found_description">If something is lost on the vehicle, you can contact us to help find it.</string>
+    <string name="biz_station_out_of_hours">The station is located in an area that is currently out of hours</string>
+    <string name="biz_title_choose_trip">Choose a trip</string>
+    <string name="biz_lf_help_title">Help</string>
+
+    <string name="biz_order_payment_method_hint">Please Select</string>
+    <string name="biz_order_payment_cancelled">Payment cancelled</string>
+    <string name="biz_order_payment_success">Payment successful</string>
+    <string name="biz_order_payment_processing">The payment is processing…</string>
+    <string name="biz_order_payment_failed">Payment failed</string>
+    <string name="biz_order_payment_try_later">Please try again later</string>
+    <string name="biz_order_payment_failed_expire">Payment timed out</string>
+    <string name="biz_order_payment_expire_try_later">Please try later</string>
+    <string name="biz_order_payment_request_timeout">Request timeout</string>
+    <string name="biz_order_payment_request_timeout_notice">The payment result has not been found yet, please check it later in \"My trips\"</string>
+    <string name="biz_away">away</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_20dp"
+    android:paddingEnd="@dimen/dimens_16dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_cvv"
+        style="@style/CommonView_TV_H4"
+        android:text="@string/payment_card_cvv"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ai.txai.common.widget.txaiedittext.DeleteAbleEditText
+        android:id="@+id/et_cvv_input"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:hint="@string/payment_card_cvv_hint"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        android:textColorHint="@color/commonview_grey_c3"
+        app:layout_constraintTop_toBottomOf="@id/ctv_cvv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

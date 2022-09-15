@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_et"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:gravity="top"
+        android:maxLength="1000"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_12dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="42dp"
+        android:textColor="@color/commonview_black_normal"
+        android:textColorHint="@color/commonview_grey_c3"
+        android:textCursorDrawable="@drawable/commonview_edit_cursor"
+        android:textSize="@dimen/global_text_size_level_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/count_tv"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:text="0/1000"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:textColor="@color/commonview_grey_c3"
+        android:textSize="@dimen/global_text_size_level_6"
+        app:layout_constraintBottom_toBottomOf="@id/input_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

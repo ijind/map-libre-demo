@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_fare_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimens_12dp"
+    android:layout_marginTop="@dimen/dimens_10dp"
+    android:layout_marginEnd="@dimen/dimens_12dp"
+    android:background="@drawable/commonview_all_corner_shape_10"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_20dp"
+    android:paddingEnd="@dimen/dimens_16dp"
+    android:paddingBottom="@dimen/dimens_16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/tv_base_fare_title"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:text="@string/biz_order_base_fare_title" />
+
+
+    <TextView
+        android:id="@+id/tv_base_fare_description"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        android:layout_marginTop="@dimen/dimens_2dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_base_fare_title"
+        tools:text="@string/biz_order_base_mileage" />
+
+    <TextView
+        android:id="@+id/tv_base_fare_amount"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_alignParentEnd="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="AED 14.00" />
+
+
+    <TextView
+        android:id="@+id/tv_mileage_fare_title"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="@string/biz_order_mileage_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_base_fare_description" />
+
+
+    <TextView
+        android:id="@+id/tv_mileage_fare_description"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        android:layout_marginTop="@dimen/dimens_2dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_mileage_fare_title"
+        tools:text="description" />
+
+    <TextView
+        android:id="@+id/tv_mileage_fare_amount"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_mileage_fare_title"
+        tools:text="AED 14.00" />
+
+
+    <View
+        android:id="@+id/line1"
+        style="@style/CommonView_one_Line_without_margin"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_mileage_fare_description" />
+
+
+    <TextView
+        android:id="@+id/tv_discount_description"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="Special offer for trial operation"
+        android:textColor="@color/commonview_color_FA5909"
+        app:layout_constraintTop_toBottomOf="@id/line1" />
+
+    <TextView
+        android:id="@+id/tv_discount_rate"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:text="100% OFF"
+        android:textColor="@color/commonview_color_FA5909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_discount_description" />
+
+
+    <View
+        android:id="@+id/line2"
+        style="@style/CommonView_one_Line_without_margin"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_discount_rate" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_amount"
+        style="@style/CommonView_TV_34SP"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:txaiFontStyle="noSpace|robot"
+        tools:text="0" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_currency"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_marginEnd="@dimen/dimens_8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="AED"
+        app:layout_constraintBottom_toBottomOf="@id/tv_amount"
+        app:layout_constraintEnd_toStartOf="@id/tv_amount"
+        app:txaiFontStyle="noSpace" />
+
+    <View
+        android:id="@+id/line3"
+        style="@style/CommonView_one_Line_without_margin"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_currency" />
+
+
+    <TextView
+        android:id="@+id/tv_payment_method_title"
+        style="@style/CommonView_TV_DESC_12sp_Black"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:layout_weight="1"
+        android:text="@string/biz_order_payment_method_title"
+        app:layout_constraintTop_toBottomOf="@id/line3" />
+
+
+    <TextView
+        android:id="@+id/tv_payment_method_description"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_payment_method_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="AED 14.00" />
+
+    <TextView
+        android:id="@+id/tv_payment_time_title"
+        style="@style/CommonView_TV_DESC_12sp_Black"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:layout_weight="1"
+        android:text="@string/biz_order_payment_time_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_payment_method_title" />
+
+    <TextView
+        android:id="@+id/tv_payment_time_description"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_payment_time_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="AED 14.00" />
+
+    <TextView
+        android:id="@+id/tv_order_number_title"
+        style="@style/CommonView_TV_DESC_12sp_Black"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:layout_weight="1"
+        android:text="@string/biz_order_number_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_payment_time_title" />
+
+    <TextView
+        android:id="@+id/tv_order_number_description"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_order_number_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="AED 14.00" />
+
+
+    <View
+        android:id="@+id/line4"
+        style="@style/CommonView_one_Line_without_margin"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_number_description" />
+
+    <TextView
+        android:id="@+id/tv_fare_breakdown"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:drawableEnd="@drawable/ic_more"
+        android:text="@string/biz_order_check_fare_breakdown"
+        android:textColor="@color/commonview_color_3B445C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

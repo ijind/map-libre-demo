@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CountDownTextView">
+        <attr name="duration" format="integer"/>
+        <attr name="interval" format="string|reference"/>
+        <attr name="finishString" format="string|reference"/>
+        <attr name="prefixText" format="string|reference"/>
+        <attr name="countDownTimeColor" format="reference"/>
+        <attr name="prefixColor" format="reference"/>
+        <attr name="finalColor" format="reference"/>
+        <attr name="suffixText" format="string|reference"/>
+        <attr name="suffixColor" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ItemWithArrowLayout">
+        <attr name="itemTitle" format="string|reference"/>
+        <attr name="itemContent" format="string|reference"/>
+        <attr name="arrowIc" format="reference"/>
+        <attr name="arrowVisible" format="boolean"/>
+        <attr name="itemTitleSize" format="dimension|integer"/>
+        <attr name="itemContentSize" format="dimension|integer"/>
+        <attr name="itemTitleColor" format="reference"/>
+        <attr name="itemContentColor" format="reference"/>
+        <attr name="itemContentBg" format="reference"/>
+        <attr name="itemPreContent" format="string|reference"/>
+        <attr name="itemPreContentSize" format="dimension|integer"/>
+        <attr name="itemPreContentColor" format="reference"/>
+        <attr name="itemPreContentBg" format="reference"/>
+        <attr name="itemTitleImg" format="reference"/>
+        <attr name="itemLineVisible" format="boolean"/>
+        <attr name="android:paddingStart"/>
+        <attr name="android:paddingLeft"/>
+        <attr name="android:paddingEnd"/>
+        <attr name="android:paddingRight"/>
+        <attr name="android:layout_marginStart"/>
+        <attr name="android:layout_marginEnd"/>
+        <attr name="android:layout_marginLeft"/>
+        <attr name="android:layout_marginRight"/>
+        <attr name="backgroundStyle">
+            <enum name="item_top" value="1"/>
+            <enum name="item_middle" value="2"/>
+            <enum name="item_bottom" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ClipViewLayout">
+        <attr name="clipType" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+        <attr name="horizontalPadding" format="dimension" />
+        <attr name="clipBorderWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomScrollView">
+        <attr name="custom_maxHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="StrokeTextView">
+        <attr name="text" format="string|reference"/>
+        <attr name="textSize" format="dimension|integer"/>
+        <attr name="textColor" format="color|reference"/>
+        <attr name="strokeColor" format="color|reference"/>
+        <attr name="tvFontWeight" format="float"/>
+        <attr name="tvStrokeWidth" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="AutoSeparationInputView">
+        <attr name="isNeedFlags" format="boolean"/>
+        <attr name="defaultIsoCode" format="string|reference" />
+        <!--    1:default
+         means: The isoCode view click listener will setup inner
+                The bottom line will show
+                2:outside
+         means: notify outside request isoCode data and show
+                The bottom line will gone-->
+        <attr name="isoShowStyle">
+            <enum name="default_style" value="1"/>
+            <enum name="outside" value="2"/>
+        </attr>
+        <attr name="showBottomLine" format="boolean"/>
+        <attr name="isoMarginLeft" format="dimension"/>
+        <attr name="removeMarginRight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TxaiEditText">
+        <attr name="editStyle">
+            <enum name="single_line" value="1"/>
+            <enum name="single_list" value="2"/>
+            <enum name="multi_line" value="3"/>
+<!--            <enum name="multi_with_camera" value="4"/>-->
+        </attr>
+        <attr name="inputHint" format="reference"/>
+        <attr name="android:maxLength" format="integer" min="0"/>
+        <attr name="android:inputType"/>
+        <attr name="android:gravity"/>
+        <attr name="singleInputTitle" format="string|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="TxaiTextView">
+        <attr name="txaiFontStyle">
+            <flag name="txaiBold" value="0x00000001"/>
+            <flag name="robot" value="0x00000010"/>
+            <flag name="noSpace" value="0x00000100"/>
+            <flag name="marquee" value="0x00001000"/>
+            <!--txaiBold and semibold choose one, if both are chosen, semibold shall work-->
+            <flag name="txaiSemibold" value="0x00010000"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TxaiSearchView">
+        <attr name="showSearchIcon" format="boolean"/>
+        <attr name="android:hint"/>
+    </declare-styleable>
+
+    <declare-styleable name="VerificationCodeView">
+        <attr name="codeCount" format="integer"/>
+        <attr name="android:inputType"/>
+    </declare-styleable>
+
+    <declare-styleable name="TxaiButton">
+        <attr name="button_style">
+            <enum name="single_button" value="1"/>
+            <enum name="multi_button_1" value="2"/>
+            <enum name="multi_button_2" value="3"/>
+        </attr>
+        <attr name="button_level">
+            <enum name="level_1" value="1"/>
+            <enum name="level_2" value="2"/>
+            <enum name="level_3" value="3"/>
+        </attr>
+        <attr name="button_type">
+            <enum name="positive_button" value="1"/>
+            <enum name="negative_button" value="2"/>
+        </attr>
+        <attr name="positiveText" format="string|reference"/>
+        <attr name="negativeText" format="string|reference"/>
+        <attr name="positiveIcon" format="reference"/>
+        <attr name="negativeIcon" format="reference"/>
+        <attr name="android:clickable"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lf_title">Lost and Found</string>
+    <string name="lf_property_report">Lost Property Report</string>
+    <string name="lf_contact_us">Contact Us</string>
+    <string name="lf_resubmit">Resubmit</string>
+
+    <string name="lf_lost_item_type">Item Type</string>
+    <string name="lf_lost_please_select">Please Select</string>
+    <string name="lf_lost_item_description">Item Description</string>
+    <string name="lf_lost_description_hint">Please briefly describe your item and where it might appear?</string>
+    <string name="lf_lost_contact_number">Contact number</string>
+    <string name="lf_lost_contact_number_input">Enter your phone number</string>
+    <string name="lf_lost_email">Email</string>
+    <string name="lf_lost_email_input">Please enter your email</string>
+    <string name="lf_lost_change_trip">Change Trip</string>
+    <string name="lf_lost_submit">Submit</string>
+    <string name="lf_lost_submit_successfully">Submitted successfully!</string>
+    <string name="lf_lost_submit_successfully_description">Your lost property report has been submitted, and our customer service will contact you through the contact information you filled in within 3 working days.</string>
+    <string name="lf_lost_process_query">Process Progress Query</string>
+    <string name="lf_lost_progress_detail">Progress Detail</string>
+    <string name="lf_aed_with_amount">AED %s</string>
+
+    <string name="lf_status_pending">Pending</string>
+    <string name="lf_status_processing">Processing</string>
+    <string name="lf_status_complete">Completed</string>
+    <string name="lf_detail_submit_info_title">Submitted Info</string>
+    <string name="lf_detail_notice">If you have any questions,\n you can directly Contact Us or Resubmit</string>
+    <string name="lf_query_list_empty">You don\'t have any queries yet</string>
+</resources>

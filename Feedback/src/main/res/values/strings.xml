@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feedback_send">Send feedback</string>
+    <string name="feedback_report">Report an issue</string>
+    <string name="feedback_choose_category">Choose a category</string>
+    <string name="feedback_describe_hint">Share your ideas, requests or comments with us and we will
+        review them as soon as possible</string>
+    <string name="feedback_contact_hint">Enter your phone number or email</string>
+    <string name="feedback_issue_hint">Please describe the problem in detail and you can attach a
+        screenshot in the section below to help us better understand it.</string>
+    <string name="feedback_describe_count">0/1000</string>
+    <string name="feedback_email_prompt">please enter the correct email</string>
+    <string name="feedback_send_logs">Send logs</string>
+    <string name="feedback_send_logs_prompt">This log will include information about your device
+        and this app to address technical issues and to improve our services.
+        To learn what info we use and how, check out our </string>
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_operation_send">Send</string>
+    <string name="feedback_operation_submit">Submit</string>
+</resources>

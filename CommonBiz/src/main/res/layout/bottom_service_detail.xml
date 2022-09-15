@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:paddingBottom="@dimen/dimens_30dp">
+
+
+    <include
+        android:id="@+id/ll_cancel_title"
+        layout="@layout/common_bottom_pop_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_cancel_title"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:background="@drawable/commonview_corner_shape_fffaef_15"
+        android:paddingStart="@dimen/dimens_14dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="@dimen/dimens_14dp"
+        android:paddingBottom="9dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_horn" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_8dp"
+            android:layout_marginEnd="@dimen/dimens_16dp"
+            android:text="@string/biz_area_service_notice"
+            android:textColor="@color/commonview_color_F0A712"
+            android:textSize="@dimen/global_text_size_level_6" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_notice"
+        android:overScrollMode="never" />
+
+</RelativeLayout>

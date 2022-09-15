@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <ai.txai.common.widget.ItemWithArrowLayout
+        android:id="@+id/setting_legal_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:arrowVisible="true"
+        app:itemTitle="@string/setting_legal_title"
+        app:itemTitleColor="@color/commonview_black_27"
+        app:itemTitleSize="@dimen/global_text_size_level_5"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ai.txai.common.widget.ItemWithArrowLayout
+        android:id="@+id/setting_update_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:arrowVisible="false"
+        app:itemContentColor="@color/commonview_grey_99"
+        app:itemContentSize="@dimen/global_text_size_level_5"
+        app:itemPreContent="New"
+        app:itemPreContentBg="@drawable/setting_red_item_content_bg"
+        app:itemPreContentColor="@color/white"
+        app:itemPreContentSize="@dimen/global_text_size_level_7"
+        app:itemTitle="@string/setting_version_title"
+        app:itemTitleColor="@color/commonview_black_27"
+        app:itemTitleSize="@dimen/global_text_size_level_5"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        app:layout_constraintTop_toBottomOf="@id/setting_legal_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

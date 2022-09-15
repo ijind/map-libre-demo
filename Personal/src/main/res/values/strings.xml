@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="personal_user_info_title">My Profile</string>
+    <string name="personal_user_edit_avatar">Edit profile photo</string>
+    <string name="personal_user_email_title">Email</string>
+    <string name="personal_user_phone_title">Phone Number</string>
+    <string name="personal_user_nick_name_title">Nickname</string>
+    <string name="personal_user_nick_hint">Please enter your nickname</string>
+    <string name="personal_user_email_hint">Please enter your email</string>
+    <string name="personal_user_info_save">Save</string>
+    <string name="personal_confirm">Confirm</string>
+    <string name="personal_change_photo">Change Photo</string>
+    <string name="personal_email_prompt">please enter the correct email</string>
+</resources>

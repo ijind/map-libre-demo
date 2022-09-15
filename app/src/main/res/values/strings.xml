@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Txai</string>
+    <string name="header_pulling"></string>
+    <string name="header_refreshing"></string>
+    <string name="header_loading">loading</string>
+    <string name="header_release"></string>
+    <string name="header_finish"></string>
+    <string name="header_failed"></string>
+    <string name="header_update"></string>
+    <string name="header_secondary"></string>
+    <string name="footer_pulling"></string>
+    <string name="footer_release"></string>
+    <string name="footer_loading">loading</string>
+    <string name="footer_refreshing"></string>
+    <string name="footer_finish"></string>
+    <string name="footer_failed"></string>
+    <string name="footer_nothing"></string>
+</resources>

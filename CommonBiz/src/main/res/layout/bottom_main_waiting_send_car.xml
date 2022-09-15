@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_20dp"
+    android:paddingBottom="@dimen/dimens_30dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_cancel_title"
+        style="@style/CommonView_TV_H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_26dp"
+        app:txaiFontStyle="txaiBold"
+        android:text="@string/biz_waiting_notice" />
+
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/tv_cancel_text"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimens_21dp"
+        app:button_type="negative_button"
+        app:button_level="level_3"
+        app:negativeText="@string/commonview_cancel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_taxi_name"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_26dp"
+        app:layout_constraintStart_toStartOf="@id/tv_cancel_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_cancel_title"
+        tools:text="@string/biz_waiting_notice" />
+
+
+    <ImageView
+        android:id="@+id/iv_processing"
+        android:layout_width="@dimen/dimens_16dp"
+        android:layout_height="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_28dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:src="@drawable/ic_ordering"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_cancel_text" />
+
+    <TextView
+        android:id="@+id/tv_queue_waiting_size"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_marginEnd="@dimen/dimens_10dp"
+        android:textColor="@color/commonview_color_040818"
+        app:layout_constraintBottom_toTopOf="@id/iv_processing"
+        app:layout_constraintEnd_toStartOf="@id/iv_processing"
+        app:layout_constraintTop_toBottomOf="@id/iv_processing"
+        tools:text="/10" />
+
+    <TextView
+        android:id="@+id/tv_queue_waiting_index"
+        style="@style/CommonView_TV_H2"
+        android:layout_marginStart="@dimen/dimens_10dp"
+        android:textColor="@color/commonview_orange_00"
+        app:layout_constraintBottom_toTopOf="@id/tv_queue_waiting_size"
+        app:layout_constraintEnd_toStartOf="@id/tv_queue_waiting_size"
+        app:layout_constraintTop_toBottomOf="@id/tv_queue_waiting_size"
+        tools:text="9" />
+
+    <TextView
+        android:id="@+id/tv_queue_waiting"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_marginEnd="@dimen/dimens_10dp"
+        android:text="@string/biz_waiting_queue"
+        android:textColor="@color/commonview_color_040818"
+        app:layout_constraintBottom_toTopOf="@id/tv_queue_waiting_index"
+        app:layout_constraintEnd_toStartOf="@id/tv_queue_waiting_index"
+        app:layout_constraintTop_toBottomOf="@id/tv_queue_waiting_index" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

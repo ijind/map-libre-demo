@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:paddingBottom="@dimen/dimens_30dp">
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/cvv_title"
+        style="@style/CommonView_TV_H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="Card CVV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:txaiFontStyle="txaiBold" />
+
+    <ImageView
+        android:id="@+id/cvv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@id/cvv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cvv_title"
+        />
+
+    <ai.txai.common.widget.VerificationCodeView
+        android:id="@+id/login_sms_code_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:inputType="numberPassword"
+        android:focusableInTouchMode="true"
+        app:codeCount="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvv_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

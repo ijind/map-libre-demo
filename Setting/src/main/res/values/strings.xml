@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting_title">Setting</string>
+    <string name="setting_legal_title">Legal</string>
+    <string name="setting_version_title">Version number</string>
+    <string name="setting_sign_out">Sign out</string>
+    <string name="setting_logout_text">Are you sure to sign out?</string>
+    <string name="setting_service_time_title">What is service area &amp; time?</string>
+    <string name="setting_use_title">How to use?</string>
+    <string name="setting_car_title">Why is there a human driver inside the car?</string>
+    <string name="setting_service_helper_title">Service and Help</string>
+    <string name="setting_customer_service">Customer service</string>
+    <string name="setting_no_upates">No updates available</string>
+</resources>

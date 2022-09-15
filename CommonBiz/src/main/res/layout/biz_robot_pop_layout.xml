@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.148" />
+
+    <View
+        android:id="@+id/roll_view_shadow"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="2dp"
+        android:background="@mipmap/ic_robot_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top" />
+
+    <View
+        android:id="@+id/roll_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimens_40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/biz_robot_pop_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/roll_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="@dimen/dimens_6dp"
+        android:layout_marginEnd="23dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        app:txaiFontStyle="marquee"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="@string/biz_robot_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/global_text_size_level_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/robot_img"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top" />
+
+    <ImageView
+        android:id="@+id/robot_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@mipmap/ic_robot"
+        app:layout_constraintBottom_toBottomOf="@id/roll_view"
+        app:layout_constraintStart_toStartOf="@id/roll_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

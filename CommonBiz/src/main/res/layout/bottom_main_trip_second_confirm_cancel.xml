@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_second_cancel_bg" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_notice"
+        style="@style/CommonView_TV_H2"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        app:txaiFontStyle="txaiBold"
+        android:text="@string/biz_second_cancel_notice" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_notice_1"
+        style="@style/CommonView_TV_H2"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        app:txaiFontStyle="txaiBold"
+        android:text="@string/biz_second_cancel_notice_1" />
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/second_confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:negativeText="@string/biz_second_btn_cancel"
+        app:positiveText="@string/biz_second_btn_keep_calling"
+        app:button_style="multi_button_1"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_20dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_20dp"/>
+
+</LinearLayout>

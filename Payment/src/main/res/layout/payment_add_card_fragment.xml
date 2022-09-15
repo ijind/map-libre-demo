@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/dimens_20dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_add_card"
+        style="@style/CommonView_TV_H4"
+        android:text="@string/payment_card_number"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ai.txai.common.widget.txaiedittext.DeleteAbleEditText
+        android:id="@+id/et_card_input"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:hint="@string/payment_card_number_hint"
+        android:inputType="number"
+        android:maxLength="23"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        android:textColorHint="@color/commonview_grey_c3"
+        app:layout_constraintTop_toBottomOf="@id/ctv_add_card"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/tv_card_unavailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:text="@string/payment_card_number_unavailable"
+        android:textColor="@color/commonview_color_FF4D4C"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/et_card_input"
+        app:layout_constraintTop_toBottomOf="@id/et_card_input" />
+
+    <ImageView
+        android:id="@+id/iv_current_card_branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/payment_ic_master_logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ctv_add_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ctv_add_card" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_expiry_date"
+        style="@style/CommonView_TV_H4"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="@string/payment_card_expiry_date"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_card_unavailable" />
+
+
+    <ai.txai.common.widget.txaiedittext.DeleteAbleEditText
+        android:id="@+id/et_expiry_date"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_10dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:hint="@string/payment_card_expiry_date_hint"
+        android:inputType="number"
+        android:maxLength="5"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        android:textColorHint="@color/commonview_grey_c3"
+        app:layout_constraintEnd_toStartOf="@id/guideline_center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctv_expiry_date" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_cvv"
+        style="@style/CommonView_TV_H4"
+        android:text="@string/payment_card_cvv"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toEndOf="@id/guideline_center_vertical"
+        app:layout_constraintTop_toTopOf="@id/ctv_expiry_date" />
+
+
+    <ai.txai.common.widget.txaiedittext.DeleteAbleEditText
+        android:id="@+id/et_cvv"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:hint="@string/payment_card_cvv_hint"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        android:textColorHint="@color/commonview_grey_c3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/ctv_cvv" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/payment_card_cvv_location"
+        app:layout_constraintBottom_toBottomOf="@id/ctv_cvv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ctv_cvv" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_card_holder"
+        style="@style/CommonView_TV_H4"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:text="@string/payment_card_holder_name"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_expiry_date" />
+
+
+    <ai.txai.common.widget.txaiedittext.DeleteAbleEditText
+        android:id="@+id/et_card_holder_input"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:hint="@string/payment_card_holder_name_hint"
+        android:inputType="textPersonName"
+        android:maxLength="50"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        android:textColorHint="@color/commonview_grey_c3"
+        app:layout_constraintTop_toBottomOf="@id/ctv_card_holder" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_email"
+        style="@style/CommonView_TV_H4"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:text="@string/payment_email"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_card_holder_input" />
+
+
+    <ai.txai.common.widget.txaiedittext.DeleteAbleEditText
+        android:id="@+id/et_email_input"
+        style="@style/CommonView_TV_DESC_Black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_8"
+        android:hint="@string/payment_email_hint"
+        android:inputType="textWebEmailAddress"
+        android:maxLength="50"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_14dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:paddingBottom="@dimen/dimens_14dp"
+        android:textColorHint="@color/commonview_grey_c3"
+        app:layout_constraintTop_toBottomOf="@id/ctv_email" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25.5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/et_email_input">
+
+        <TextView
+            style="@style/CommonView_TV_DESC_14sp_Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/payment_notice_to_save_card" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/save_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:background="@null"
+            app:track="@drawable/commonview_switch_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:thumb="@drawable/commonview_switch_thumb_bg" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

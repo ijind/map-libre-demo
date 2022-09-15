@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_bg_with_arraw"
+    android:elevation="@dimen/dimens_6dp"
+    android:minWidth="58dp"
+    android:paddingStart="@dimen/dimens_12dp"
+    android:paddingTop="4.5dp"
+    android:paddingEnd="@dimen/dimens_12dp"
+    android:paddingBottom="7dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_route"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp">
+
+        <ai.txai.common.widget.txaitextview.TxaiTextView
+            android:id="@+id/est_distance"
+            style="@style/CommonView_TV_DESC_12sp_Black"
+            android:textColor="@color/commonview_orange_00"
+            app:txaiFontStyle="txaiBold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_route_title"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="3.2 km" />
+
+        <TextView
+            android:id="@+id/tv_route_title"
+            style="@style/CommonView_TV_DESC_12sp_Black"
+            android:layout_marginStart="@dimen/dimens_4dp"
+            android:text="@string/biz_away"
+            app:layout_constraintStart_toEndOf="@id/est_distance" />
+
+        <TextView
+            android:id="@+id/tv_eta_title"
+            style="@style/CommonView_TV_DESC_12sp_Black"
+            android:text="ETA"
+            app:layout_constraintTop_toBottomOf="@id/tv_route_title" />
+
+        <ai.txai.common.widget.txaitextview.TxaiTextView
+            android:id="@+id/est_time"
+            style="@style/CommonView_TV_DESC_12sp_Black"
+            android:layout_marginStart="@dimen/dimens_4dp"
+            android:textColor="@color/commonview_orange_00"
+            android:textSize="@dimen/global_text_size_level_7"
+            app:txaiFontStyle="txaiBold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_eta_title"
+            app:layout_constraintStart_toEndOf="@id/tv_eta_title"
+            tools:text="10mins" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/CommonView_one_Line_vertical"
+        android:layout_height="@dimen/dimens_24dp"
+        android:layout_marginStart="@dimen/dimens_6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cl_route"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/line"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ai.txai.common.widget.txaitextview.TxaiTextView
+            android:id="@+id/tv_aed_amount"
+            style="@style/CommonView_TV_DESC_12sp_Black"
+            android:layout_marginStart="@dimen/dimens_4dp"
+            android:textColor="@color/commonview_orange_00"
+            android:textSize="@dimen/global_text_size_level_7"
+            app:txaiFontStyle="txaiBold"
+            tools:text="AED 0" />
+
+        <TextView
+            android:id="@+id/tv_aed_dismount"
+            style="@style/CommonView_TV_DESC_12sp_Gray"
+            android:layout_marginTop="@dimen/dimens_2dp"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@id/tv_aed_amount"
+            app:layout_constraintTop_toBottomOf="@id/tv_aed_amount"
+            tools:text="AED 6.3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="@dimen/dimens_14dp"
+        android:layout_height="@dimen/dimens_14dp"
+        android:layout_marginStart="@dimen/dimens_4dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cl_price"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

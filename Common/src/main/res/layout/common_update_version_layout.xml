@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.16"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.84"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_inner_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.19"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_view_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_inner_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.81"/>
+
+    <View
+        android:id="@+id/white_bg_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/commonview_all_corner_shape_8"
+        app:layout_constraintBottom_toBottomOf="@id/space_holder_view"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/guideline_view_top" />
+
+    <ImageView
+        android:id="@+id/update_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_update_version"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"/>
+
+    <TextView
+        android:id="@+id/new_version_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29.5dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/commonview_black_normal"
+        android:textSize="@dimen/global_text_size_level_2"
+        android:text="@string/commonview_new_version_title"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintStart_toEndOf="@id/guideline_inner_start" />
+
+    <TextView
+        android:id="@+id/new_version_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/global_text_size_level_4"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/commonview_black_normal"
+        app:layout_constraintTop_toBottomOf="@id/new_version_title"
+        app:layout_constraintStart_toEndOf="@id/guideline_inner_start"/>
+
+    <TextView
+        android:id="@+id/new_version_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/commonview_update_sub_title"
+        android:textColor="@color/commonview_black_normal"
+        android:textSize="@dimen/global_text_size_level_6"
+        app:layout_constraintStart_toEndOf="@id/guideline_inner_start"
+        app:layout_constraintTop_toBottomOf="@id/update_img" />
+
+    <ai.txai.common.widget.CustomScrollView
+        android:id="@+id/upgrade_info_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:custom_maxHeight="230dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_inner_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_inner_start"
+        app:layout_constraintTop_toBottomOf="@id/new_version_subtitle">
+
+        <TextView
+            android:id="@+id/new_version_info_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/commonview_color_3B445C"
+            android:textSize="@dimen/global_text_size_level_6" />
+    </ai.txai.common.widget.CustomScrollView>
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/update_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:button_style="multi_button_1"
+        android:layout_marginTop="20dp"
+        app:positiveText="@string/commonview_update"
+        app:layout_constraintEnd_toStartOf="@id/guideline_inner_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_inner_start"
+        app:layout_constraintTop_toBottomOf="@id/upgrade_info_container"/>
+
+    <View
+        android:id="@+id/space_holder_view"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="@id/update_btn"
+        app:layout_constraintStart_toStartOf="@id/update_btn"
+        app:layout_constraintTop_toBottomOf="@id/update_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

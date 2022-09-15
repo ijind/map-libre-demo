@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="payment_credit_card_title">Bank Card</string>
+    <string name="payment_payby_title">PayBy</string>
+
+    <string name="payment_method_title">Payment method</string>
+    <string name="payment_add_new_card_title">Add new card</string>
+    <string name="payment_add_card_title">Add Card</string>
+    <string name="payment_title">Payment</string>
+    <string name="payment_card_number">Card Number</string>
+    <string name="payment_card_number_hint">Enter your card number</string>
+    <string name="payment_card_number_unavailable">Invalid card number, please try again or use another card</string>
+    <string name="payment_card_expiry_date">Expiry Date</string>
+    <string name="payment_card_expiry_date_hint">MM/YY</string>
+
+    <string name="payment_card_cvv">CVV</string>
+    <string name="payment_card_cvv_hint">3-digit CVV</string>
+
+
+    <string name="payment_card_holder_name">Card Holder Name</string>
+    <string name="payment_card_holder_name_hint">Card account holder name</string>
+
+    <string name="payment_email">Email (optional)</string>
+    <string name="payment_email_hint">Please enter your email</string>
+
+    <string name="payment_confirm_payment">Confirm payment</string>
+    <string name="payment_notice_to_save_card">Remember this card for future orders</string>
+
+    <string name="payment_info_title">Payment info</string>
+    <string name="payment_card_token_expired">Card authorization has expired and will be removed. Please rebind the card</string>
+</resources>

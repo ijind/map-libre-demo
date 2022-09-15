@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/login_sms_fir"
+        android:layout_width="@dimen/dimens_44dp"
+        android:layout_height="@dimen/dimens_44dp"
+        android:background="@drawable/commonview_edit_focus_style"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:maxLength="1"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@drawable/commonview_edit_cursor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/login_sms_sec"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/login_sms_sec"
+        android:layout_width="@dimen/dimens_44dp"
+        android:layout_height="@dimen/dimens_44dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/commonview_edit_focus_style"
+        android:gravity="center"
+        android:visibility="gone"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@drawable/commonview_edit_cursor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/login_sms_thi"
+        app:layout_constraintStart_toEndOf="@id/login_sms_fir"
+        app:layout_constraintTop_toTopOf="@id/login_sms_fir" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/login_sms_thi"
+        android:layout_width="@dimen/dimens_44dp"
+        android:layout_height="@dimen/dimens_44dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/commonview_edit_focus_style"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@drawable/commonview_edit_cursor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/login_sms_fou"
+        app:layout_constraintStart_toEndOf="@id/login_sms_sec"
+        app:layout_constraintTop_toTopOf="@id/login_sms_sec" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/login_sms_fou"
+        android:layout_width="@dimen/dimens_44dp"
+        android:layout_height="@dimen/dimens_44dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/commonview_edit_focus_style"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:maxLength="1"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@drawable/commonview_edit_cursor"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/login_sms_thi"
+        app:layout_constraintTop_toTopOf="@id/login_sms_thi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

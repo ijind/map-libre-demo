@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimens_20dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimens_16dp"
+        android:paddingTop="@dimen/dimens_20dp"
+        android:paddingEnd="@dimen/dimens_16dp" />
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/button_request_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:positiveText="Request Ride"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_20dp"/>
+
+</LinearLayout>

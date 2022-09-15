@@ -1,0 +1,118 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+def keyStorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keyStorePropertiesFile))
+
+def releaseTime() {
+    return new Date().format("MMddHHmm", TimeZone.getTimeZone("GMT+04:00"))
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.gomap.robotaxi"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+    viewBinding {
+        enabled = true
+    }
+
+    signingConfigs {
+
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+
+            resValue("string","mapbox_access_token","${MAPBOX_DOWNLOADS_TOKEN}")
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+
+            resValue("string","mapbox_access_token","${MAPBOX_DOWNLOADS_TOKEN}")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                output ->
+                    def outputFile = output.outputFile
+                    def fileName = "txai_${buildType.name}_v${defaultConfig.versionName}.${defaultConfig.versionCode}_${releaseTime()}.apk"
+                    if (outputFile.name.endsWith(".apk")) {
+                        outputFileName = new File(fileName)
+                    }
+            }
+    }
+
+//    packagingOptions {
+//        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+//        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+//    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
+
+    implementation project(':Common')
+    implementation project(':CommonBiz')
+    implementation project(':MapBox')
+    implementation project(':MapSdk')
+    implementation project(':Login')
+    implementation project(':Personal')
+    implementation project(':Setting')
+    implementation project(':Push')
+    implementation project(':LostFound')
+    implementation project(':Feedback')
+    implementation project(':ImageSelector')
+    implementation project(':Payment')
+}

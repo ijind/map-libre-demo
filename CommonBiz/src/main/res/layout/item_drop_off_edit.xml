@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_marginStart="@dimen/dimens_16dp"
+    android:layout_marginEnd="@dimen/dimens_16dp"
+    android:background="@drawable/commonview_click_bg_eb">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_10dp"
+        android:src="@drawable/ic_drop_off_location" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/drop_off_tv"
+        style="@style/CommonView_TV_H2"
+        android:text="Where to?"
+        app:txaiFontStyle="txaiBold" />
+</LinearLayout>

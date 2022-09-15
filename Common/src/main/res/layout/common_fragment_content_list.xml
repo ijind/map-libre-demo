@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/setting_back_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_44dp"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp"
+        android:src="@mipmap/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/toolbar_title_tv"
+        style="@style/CommonView_TV_H3"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintBottom_toBottomOf="@id/setting_back_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/setting_back_img" />
+
+
+    <FrameLayout
+        android:id="@+id/common_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setting_back_img">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/content_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="@android:color/white"
+            app:srlHeaderMaxDragRate="2.5"
+            app:srlPrimaryColor="@android:color/white">
+
+            <com.scwang.smart.refresh.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:srlAccentColor="#000000"
+                app:srlTextSizeTime="10sp"
+                app:srlTextSizeTitle="12sp" />
+
+            <ai.txai.commonview.observablescrollview.ObservableRecyclerView
+                android:id="@+id/content_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:srlAccentColor="#000000"
+                app:srlTextSizeTitle="12sp" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+        <FrameLayout
+            android:id="@+id/emptyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/emptyView"
+                layout="@layout/commonview_no_trip_layout" />
+
+            <ai.txai.common.widget.txaitextview.TxaiTextView
+                android:id="@+id/title_tv"
+                style="@style/CommonView_TV_H1"
+                app:txaiFontStyle="txaiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_20dp" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <ai.txai.common.widget.popupview.CommonLoadingStatusView
+        android:id="@+id/status_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/common_content_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

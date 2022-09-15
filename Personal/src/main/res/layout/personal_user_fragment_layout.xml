@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/test_personal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <ai.txai.common.widget.txaiimageview.CircleImageView
+        android:id="@+id/user_avatar_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_default_avatar"
+        app:civ_border_width="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_edit_avatar_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/personal_user_edit_avatar"
+        android:textColor="@color/commonview_grey_99"
+        android:textSize="@dimen/global_text_size_level_6"
+        app:layout_constraintEnd_toEndOf="@id/user_avatar_img"
+        app:layout_constraintStart_toStartOf="@id/user_avatar_img"
+        app:layout_constraintTop_toBottomOf="@id/user_avatar_img" />
+
+    <ai.txai.common.widget.ItemWithArrowLayout
+        android:id="@+id/user_phone_item"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        app:itemContentColor="@color/commonview_grey_99"
+        app:itemContentSize="@dimen/global_text_size_level_6"
+        app:itemTitle="@string/personal_user_phone_title"
+        app:itemTitleColor="@color/commonview_black_27"
+        app:itemTitleSize="@dimen/global_text_size_level_5"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/user_edit_avatar_tv" />
+
+    <ai.txai.common.widget.txaiedittext.TxaiEditText
+        android:id="@+id/user_nick_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|end"
+        android:inputType="text"
+        android:maxLength="30"
+        android:maxLines="1"
+        app:editStyle="single_list"
+        app:inputHint="@string/personal_user_nick_hint"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/user_phone_item"
+        app:singleInputTitle="@string/personal_user_nick_name_title" />
+
+    <ai.txai.common.widget.txaiedittext.TxaiEditText
+        android:id="@+id/user_email_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|end"
+        android:inputType="text"
+        android:maxLength="30"
+        android:maxLines="1"
+        app:editStyle="single_list"
+        app:inputHint="@string/personal_user_email_hint"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/user_nick_name_tv"
+        app:singleInputTitle="@string/personal_user_email_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

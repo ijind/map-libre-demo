@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimens_50dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_phone_number"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:textColor="@color/commonview_black_normal"
+        android:textColorHint="@color/commonview_grey_c3"
+        android:textCursorDrawable="@drawable/commonview_edit_cursor"
+        android:textSize="@dimen/global_text_size_level_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/input_remove_img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/input_remove_img"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/dimens_5dp"
+        android:paddingEnd="@dimen/dimens_16dp"
+        android:visibility="gone"
+        android:src="@mipmap/commonview_delete_ic"
+        app:layout_constraintBottom_toBottomOf="@id/input_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/input_phone_number" />
+</androidx.constraintlayout.widget.ConstraintLayout>

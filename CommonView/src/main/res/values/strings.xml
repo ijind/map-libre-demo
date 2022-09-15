@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="commonview_cancel">Cancel</string>
+    <string name="commonview_settings">Settings</string>
+    <string name="commonview_enable_camera_title">Enable Camera</string>
+    <string name="commonview_enable_location_title">Enable Location</string>
+    <string name="commonview_settings_camera_explain">For better experience, we need access to your Camera. Tap Settings->Permissions, and enable Camera</string>
+    <string name="commonview_settings_location_explain">For better experience, we need access to your Location. Tap Settings->Permissions, and enable Location</string>
+    <string name="commonview_txai_email">Email: robotxai@xxx.ai</string>
+    <string name="commonview_no_network_prompt">Oops! Network error</string>
+    <string name="commonview_try_again">Let’s try again later.</string>
+    <string name="commonview_refresh">Refresh</string>
+    <string name="commonview_no_trip">You don\'t have any trips yet</string>
+    <string name="commonview_search_hint">Search</string>
+    <string name="ok">OK</string>
+    <string name="commonview_update_sub_title">What’s new?</string>
+    <string name="commonview_update_later">Later</string>
+    <string name="commonview_update">Update</string>
+    <string name="commonview_new_version_title">New version</string>
+    <string name="commonview_user_take_photo">Take photo</string>
+    <string name="commonview_user_choose_photo">Choose photo</string>
+    <string name="commonview_confirm">Confirm</string>
+    <string name="commonview_user_agreement">User Service Agreement</string>
+    <string name="commonview_privacy">Privacy Policy</string>
+    <string name="commonview_camera_permission">For better experience, we need access to your Camera.
+        Tap Settings > Permissions, and enable Camera.</string>
+    <string name="commonview_number_input_hint">Enter your phone number</string>
+    <string name="commonview_country_code_title">Country &amp; Area Code</string>
+    <string name="commonview_hint">Entry</string>
+    <string name="commonview_delete">Delete</string>
+    <string name="commonview_no_internet_prompt">No internet connection</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimens_0.5dp">0.5dp</dimen>
+    <dimen name="dimens_1dp">1dp</dimen>
+    <dimen name="dimens_2dp">2dp</dimen>
+    <dimen name="dimens_4dp">4dp</dimen>
+    <dimen name="dimens_5dp">5dp</dimen>
+    <dimen name="dimens_6dp">6dp</dimen>
+    <dimen name="dimens_7dp">7dp</dimen>
+    <dimen name="dimens_8dp">8dp</dimen>
+    <dimen name="dimens_10dp">10dp</dimen>
+    <dimen name="dimens_11dp">11dp</dimen>
+    <dimen name="dimens_12dp">12dp</dimen>
+    <dimen name="dimens_14dp">14dp</dimen>
+    <dimen name="dimens_15dp">15dp</dimen>
+    <dimen name="dimens_16dp">16dp</dimen>
+    <dimen name="dimens_18dp">18dp</dimen>
+    <dimen name="dimens_20dp">20dp</dimen>
+    <dimen name="dimens_21dp">21dp</dimen>
+    <dimen name="dimens_22dp">22dp</dimen>
+    <dimen name="dimens_23dp">23dp</dimen>
+    <dimen name="dimens_24dp">24dp</dimen>
+    <dimen name="dimens_25dp">25dp</dimen>
+    <dimen name="dimens_26dp">26dp</dimen>
+    <dimen name="dimens_27dp">27dp</dimen>
+    <dimen name="dimens_28dp">28dp</dimen>
+    <dimen name="dimens_29dp">29dp</dimen>
+    <dimen name="dimens_30dp">30dp</dimen>
+    <dimen name="dimens_31dp">31dp</dimen>
+    <dimen name="dimens_32dp">32dp</dimen>
+    <dimen name="dimens_40dp">40dp</dimen>
+    <dimen name="dimens_44dp">44dp</dimen>
+    <dimen name="dimens_48dp">48dp</dimen>
+    <dimen name="dimens_50dp">50dp</dimen>
+    <dimen name="dimens_51dp">51dp</dimen>
+    <dimen name="dimens_60dp">60dp</dimen>
+    <dimen name="dimens_80dp">80dp</dimen>
+    <dimen name="dimens_56dp">56dp</dimen>
+    <dimen name="dimens_64dp">64dp</dimen>
+    <dimen name="dimens_128dp">128dp</dimen>
+    <dimen name="dimens_343dp">343dp</dimen>
+
+    <dimen name="dimens_10sp">10sp</dimen>
+    <dimen name="dimens_12sp">12sp</dimen>
+    <dimen name="dimens_14sp">14sp</dimen>
+    <dimen name="dimens_16sp">16sp</dimen>
+    <dimen name="dimens_18sp">18sp</dimen>
+    <dimen name="dimens_20sp">20sp</dimen>
+    <dimen name="dimens_22sp">22sp</dimen>
+    <dimen name="dimens_24sp">24sp</dimen>
+    <dimen name="dimens_28sp">28sp</dimen>
+    <dimen name="dimens_34sp">34sp</dimen>
+    <dimen name="dimens_43sp">43sp</dimen>
+
+    <dimen name="common_margin_to_screen_side">10dp</dimen>
+
+    <dimen name="global_text_size_level_1">24sp</dimen>
+    <dimen name="global_text_size_level_2">22sp</dimen>
+    <dimen name="global_text_size_level_3">20sp</dimen>
+    <dimen name="global_text_size_level_4">18sp</dimen>
+    <dimen name="global_text_size_level_5">16sp</dimen>
+    <dimen name="global_text_size_level_6">14sp</dimen>
+    <dimen name="global_text_size_level_7">12sp</dimen>
+    <dimen name="global_text_size_level_8">10sp</dimen>
+
+    <dimen name="flexible_space_height">54dp</dimen>
+    <dimen name="toolbar_height">44dp</dimen>
+
+</resources>

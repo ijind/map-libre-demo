@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_20dp"
+    android:paddingEnd="@dimen/dimens_16dp"
+    android:paddingBottom="@dimen/dimens_16dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_cancel_title"
+        style="@style/CommonView_TV_H2"
+        app:txaiFontStyle="txaiBold"
+        android:text="@string/biz_trip_complete_title" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_currency"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23.5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="AED"
+        app:txaiFontStyle="noSpace"
+        app:layout_constraintTop_toBottomOf="@id/tv_cancel_title" />
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_amount"
+        style="@style/CommonView_TV_H1"
+        android:layout_marginStart="@dimen/dimens_4dp"
+        android:text="0.00"
+        app:txaiFontStyle="robot|noSpace"
+        app:layout_constraintBottom_toBottomOf="@id/tv_currency"
+        app:layout_constraintStart_toEndOf="@id/tv_currency" />
+
+    <TextView
+        android:id="@+id/tv_discount"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_marginStart="@dimen/dimens_10dp"
+        android:text="AED 65.26"
+        app:layout_constraintBottom_toBottomOf="@id/tv_amount"
+        app:layout_constraintStart_toEndOf="@id/tv_amount" />
+
+    <TextView
+        android:id="@+id/tv_discount_level"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        android:layout_marginStart="@dimen/dimens_6dp"
+        android:background="@drawable/biz_discount_100_bg"
+        android:gravity="center"
+        android:paddingStart="@dimen/dimens_5dp"
+        android:paddingTop="@dimen/dimens_1dp"
+        android:paddingEnd="@dimen/dimens_5dp"
+        android:paddingBottom="@dimen/dimens_1dp"
+        android:text="100%OFF"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/tv_discount"
+        app:layout_constraintStart_toEndOf="@id/tv_discount" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="@id/tv_discount_level"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_receipt_details"
+        style="@style/CommonView_TV_DESC_12sp_Gray"
+        android:layout_marginEnd="@dimen/dimens_2dp"
+        android:text="@string/biz_order_receipt_details"
+        app:layout_constraintBottom_toBottomOf="@id/iv_more"
+        app:layout_constraintEnd_toStartOf="@id/iv_more"
+        app:layout_constraintTop_toTopOf="@id/iv_more" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_car_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_10"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_currency">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_car_body"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimens_44dp">
+
+            <ImageView
+                android:id="@+id/iv_car_body"
+                android:layout_width="65dp"
+                android:layout_height="37dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/biz_ic_car_body_complete" />
+
+            <TextView
+                android:id="@+id/tv_taxi_name"
+                style="@style/CommonView_TV_DESC_12sp_White"
+                android:background="@drawable/biz_roboto_taxi_small_bg"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_car_body"
+                app:layout_constraintStart_toEndOf="@id/iv_car_body"
+                tools:text="Robotaxi" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ai.txai.common.widget.txaitextview.TxaiTextView
+            android:id="@+id/car_number"
+            style="@style/CommonView_TV_H2"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/dimens_16dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/dimens_18sp"
+            app:txaiFontStyle="robot"
+            app:layout_constraintBottom_toTopOf="@id/cl_car_body"
+            app:layout_constraintStart_toEndOf="@id/cl_car_body"
+            app:layout_constraintTop_toBottomOf="@id/cl_car_body"
+            tools:text="18-81160" />
+
+
+        <TextView
+            android:id="@+id/car_color"
+            style="@style/CommonView_TV_DESC_14sp_Gray"
+            app:layout_constraintBottom_toTopOf="@id/cl_car_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_car_body"
+            tools:text="White" />
+
+        <View
+            android:id="@+id/line_sep"
+            style="@style/CommonView_one_Line_vertical"
+            android:layout_height="@dimen/dimens_10dp"
+            android:layout_marginEnd="@dimen/dimens_8dp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_car_body"
+            app:layout_constraintEnd_toStartOf="@id/car_color"
+            app:layout_constraintTop_toTopOf="@id/cl_car_body" />
+
+        <TextView
+            android:id="@+id/car_name"
+            style="@style/CommonView_TV_DESC_14sp_Gray"
+            android:layout_marginEnd="@dimen/dimens_8dp"
+            app:layout_constraintBottom_toBottomOf="@id/cl_car_body"
+            app:layout_constraintEnd_toStartOf="@id/line_sep"
+            app:layout_constraintTop_toTopOf="@id/cl_car_body"
+            tools:text="Nissan" />
+
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:src="@drawable/commonview_ic_time"
+            app:layout_constraintTop_toBottomOf="@id/cl_car_body" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/CommonView_TV_DESC_14sp_Gray"
+            android:layout_marginStart="@dimen/dimens_10dp"
+            android:textColor="@color/commonview_color_3B445C"
+            app:layout_constraintBottom_toTopOf="@id/iv_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_icon"
+            app:layout_constraintTop_toBottomOf="@id/iv_icon"
+            tools:text="12:54 PM, Feb 17, 2022" />
+
+
+        <View
+            android:layout_width="@dimen/dimens_1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimens_2dp"
+            android:layout_marginBottom="@dimen/dimens_2dp"
+            android:background="#4B7DF6"
+            app:layout_constraintBottom_toBottomOf="@id/iv_drop_off"
+            app:layout_constraintEnd_toStartOf="@id/iv_pick_up"
+            app:layout_constraintStart_toEndOf="@id/iv_pick_up"
+            app:layout_constraintTop_toTopOf="@id/iv_pick_up" />
+
+        <ImageView
+            android:id="@+id/iv_pick_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:src="@drawable/ic_pick_up_location"
+            app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+
+        <TextView
+            android:id="@+id/tv_pick_up_name"
+            style="@style/CommonView_TV_DESC_14sp_Black"
+            android:layout_marginStart="@dimen/dimens_10dp"
+            app:layout_constraintBottom_toTopOf="@id/iv_pick_up"
+            app:layout_constraintStart_toEndOf="@id/iv_pick_up"
+            app:layout_constraintTop_toBottomOf="@id/iv_pick_up"
+            tools:text="Hilton"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_drop_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_16dp"
+            android:src="@drawable/ic_drop_off_location"
+            app:layout_constraintTop_toBottomOf="@id/iv_pick_up" />
+
+        <TextView
+            android:id="@+id/tv_drop_off_name"
+            style="@style/CommonView_TV_DESC_14sp_Black"
+            android:layout_marginStart="@dimen/dimens_10dp"
+            app:layout_constraintBottom_toTopOf="@id/iv_drop_off"
+            app:layout_constraintStart_toEndOf="@id/iv_drop_off"
+            app:layout_constraintTop_toBottomOf="@id/iv_drop_off"
+            tools:text="Abu Dhabi Mall" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_helper_title"
+        style="@style/CommonView_TV_H4"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:text="@string/biz_lf_help_title"
+        app:txaiFontStyle="txaiBold"
+        app:layout_constraintTop_toBottomOf="@id/cl_car_info" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_helper_entrance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:background="@drawable/commonview_all_corner_shape_fafafa_10"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_helper_title">
+
+        <ImageView
+            android:id="@+id/iv_helper_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/biz_ic_helper"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_helper_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ai.txai.common.widget.txaitextview.TxaiTextView
+            android:id="@+id/ctv_helper_title"
+            style="@style/CommonView_TV_H4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_11dp"
+            android:text="@string/biz_lost_and_found_title"
+            app:txaiFontStyle="txaiBold"
+            app:layout_constraintStart_toEndOf="@id/iv_helper_icon" />
+
+        <TextView
+            style="@style/CommonView_TV_DESC_14sp_Black"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/dimens_11dp"
+            android:layout_marginTop="@dimen/dimens_6dp"
+            android:layout_marginEnd="@dimen/dimens_16dp"
+            android:textColor="@color/commonview_color_3B445C"
+            android:text="@string/biz_lost_and_found_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_helper_more"
+            app:layout_constraintStart_toEndOf="@id/iv_helper_icon"
+            app:layout_constraintTop_toBottomOf="@id/ctv_helper_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

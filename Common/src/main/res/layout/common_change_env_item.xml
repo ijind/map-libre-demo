@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_all_corner_shape_15"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_10dp"
+    android:paddingEnd="@dimen/dimens_16dp"
+    android:paddingBottom="@dimen/dimens_10dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_url_name"
+        style="@style/CommonView_TV_DESC_Black"
+        app:txaiFontStyle="txaiBold"
+        tools:text="name:" />
+
+
+    <TextView
+        android:id="@+id/tv_url_content"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        app:layout_constraintBottom_toBottomOf="@id/ctv_url_name"
+        app:layout_constraintStart_toEndOf="@id/ctv_url_name"
+        app:layout_constraintTop_toTopOf="@id/ctv_url_name"
+        tools:text="url" />
+
+
+    <ImageView
+        android:id="@+id/iv_selected_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/commonview_ic_box_default"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

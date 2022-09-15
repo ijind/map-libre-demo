@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dimens_20dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="@dimen/dimens_40dp"
+        android:layout_height="@dimen/dimens_40dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/commonview_ic_success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/ctv_successfully"
+        style="@style/CommonView_TV_H2"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        app:txaiFontStyle="txaiBold"
+        android:text="@string/lf_lost_submit_successfully"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_status" />
+
+    <TextView
+        android:id="@+id/ctv_successfully_description"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/dimens_30dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_30dp"
+        android:gravity="center"
+        android:text="@string/lf_lost_submit_successfully_description"
+        android:textColor="@color/commonview_color_040818"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctv_successfully" />
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/btn_ok"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        app:button_level="level_2"
+        app:button_type="negative_button"
+        app:negativeText="@string/ok"
+        android:layout_marginTop="@dimen/dimens_30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctv_successfully_description"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

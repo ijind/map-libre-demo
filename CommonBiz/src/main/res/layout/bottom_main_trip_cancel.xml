@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimens_16dp">
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        style="@style/CommonView_TV_H2"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:layout_marginBottom="@dimen/dimens_10dp"
+        android:text="@string/biz_trip_cancel_title"
+        app:txaiFontStyle="txaiBold" />
+
+    <TextView
+        android:id="@+id/tv_cancel_reason"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:textColor="@color/commonview_color_3B445C"
+        tools:text="The trip was cancelled by the user" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_10dp"
+        android:layout_marginBottom="@dimen/dimens_10dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dimens_16dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/commonview_ic_time" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/CommonView_TV_DESC_14sp_Gray"
+            android:layout_marginStart="@dimen/dimens_10dp"
+            android:textColor="@color/commonview_color_3B445C"
+            tools:text="12:54 PM, Feb 17, 2022" />
+    </LinearLayout>
+
+</LinearLayout>

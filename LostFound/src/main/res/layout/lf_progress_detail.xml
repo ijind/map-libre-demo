@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimens_10dp">
+
+
+    <include
+        android:id="@+id/layout_progress"
+        layout="@layout/lf_item_progress_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_16dp" />
+
+    <include
+        android:id="@+id/layout_submit"
+        layout="@layout/lf_item_submit_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_progress" />
+
+    <include
+        android:id="@+id/layout_order_info"
+        layout="@layout/lf_item_order_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_submit" />
+
+    <TextView
+        android:id="@+id/tv_details_extra_notice"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:gravity="center"
+        android:text="@string/lf_detail_notice"
+        android:textSize="@dimen/dimens_12sp"
+        android:paddingBottom="@dimen/dimens_40dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_order_info" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

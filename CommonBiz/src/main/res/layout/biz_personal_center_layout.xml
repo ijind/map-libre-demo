@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/left"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_64dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_vertical">
+
+            <ai.txai.common.widget.txaiimageview.CircleImageView
+                android:id="@+id/drawerLeftAvatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="16dp"
+                android:src="@mipmap/ic_default_avatar" />
+
+            <LinearLayout
+                android:id="@+id/edit_profile_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ai.txai.common.widget.txaitextview.TxaiTextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimens_20dp"
+                    app:txaiFontStyle="txaiBold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/commonview_color_040818"
+                    android:textSize="@dimen/global_text_size_level_5" />
+
+
+                <TextView
+                    android:id="@+id/editProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_4dp"
+                    android:text="@string/biz_edit_profile"
+                    android:textColor="#888B99"
+                    android:textSize="@dimen/global_text_size_level_7" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ai.txai.common.widget.ItemWithArrowLayout
+            android:id="@+id/myTrips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:arrowVisible="true"
+            app:itemTitle="@string/biz_my_trip"
+            app:itemLineVisible="false"
+            android:paddingStart="@dimen/dimens_20dp"
+            android:paddingEnd="@dimen/dimens_20dp"
+            app:itemTitleImg="@drawable/ic_my_trip"/>
+
+        <ai.txai.common.widget.ItemWithArrowLayout
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:arrowVisible="true"
+            app:itemTitle="@string/biz_service_and_helper"
+            app:itemLineVisible="false"
+            android:paddingStart="@dimen/dimens_20dp"
+            android:paddingEnd="@dimen/dimens_20dp"
+            app:itemTitleImg="@drawable/ic_helper"/>
+
+        <ai.txai.common.widget.ItemWithArrowLayout
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:arrowVisible="true"
+            app:itemTitle="@string/biz_feedback"
+            app:itemLineVisible="false"
+            android:visibility="gone"
+            android:paddingStart="@dimen/dimens_20dp"
+            android:paddingEnd="@dimen/dimens_20dp"
+            app:itemTitleImg="@drawable/ic_feedback"/>
+
+        <ai.txai.common.widget.ItemWithArrowLayout
+            android:id="@+id/settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:arrowVisible="true"
+            app:itemTitle="@string/biz_settings"
+            app:itemLineVisible="false"
+            android:paddingStart="@dimen/dimens_20dp"
+            android:paddingEnd="@dimen/dimens_20dp"
+            app:itemTitleImg="@drawable/ic_settings"/>
+
+    </LinearLayout>
+</FrameLayout>

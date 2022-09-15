@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/precautions_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimens_20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="3.5dp">
+
+        <ai.txai.common.widget.txaitextview.TxaiTextView
+            android:id="@+id/precaution_title"
+            style="@style/CommonView_TV_H2"
+            android:layout_width="match_parent"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:layout_marginEnd="49dp"
+            android:gravity="center"
+            app:txaiFontStyle="txaiBold"
+            android:text="@string/biz_precautions_title"
+            app:layout_constraintEnd_toStartOf="@id/precautions_ic_2"
+            app:layout_constraintStart_toEndOf="@id/precautions_ic_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/middle_line"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/precaution_title" />
+
+        <ImageView
+            android:id="@+id/precautions_ic_1"
+            android:layout_width="181dp"
+            android:layout_height="142dp"
+            android:layout_marginTop="@dimen/dimens_6dp"
+            android:background="@mipmap/biz_ic_precaution_right"
+            app:layout_constraintEnd_toEndOf="@id/middle_line"
+            app:layout_constraintTop_toBottomOf="@id/precaution_title" />
+
+        <ImageView
+            android:id="@+id/precautions_ic_2"
+            android:layout_width="181dp"
+            android:layout_height="142dp"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/biz_ic_precautions_wrong"
+            app:layout_constraintStart_toStartOf="@id/middle_line"
+            app:layout_constraintTop_toTopOf="@id/precautions_ic_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/ll_notice_1"
+        layout="@layout/biz_item_precautions" />
+
+    <include
+        android:id="@+id/ll_notice_2"
+        layout="@layout/biz_item_precautions" />
+
+    <include
+        android:id="@+id/ll_notice_3"
+        layout="@layout/biz_item_precautions" />
+
+    <include
+        android:id="@+id/ll_notice_4"
+        layout="@layout/biz_item_precautions" />
+
+    <include
+        android:id="@+id/ll_notice_5"
+        layout="@layout/biz_item_precautions" />
+
+    <include
+        android:id="@+id/ll_notice_6"
+        layout="@layout/biz_item_precautions" />
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:positiveText="@string/ok"/>
+
+</LinearLayout>

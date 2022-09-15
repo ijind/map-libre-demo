@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ai.txai.common.widget.ItemWithArrowLayout
+        android:id="@+id/service_helper_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/dimens_20dp"
+        android:paddingEnd="@dimen/dimens_20dp"
+        app:arrowIc="@mipmap/ic_expand_down"
+        app:arrowVisible="true"
+        app:itemTitle="@string/setting_service_time_title"
+        app:itemTitleColor="@color/commonview_black_27"
+        app:itemTitleSize="@dimen/global_text_size_level_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/commonview_grey_f6"
+        app:layout_constraintTop_toBottomOf="@id/service_helper_title"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/expand_service_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        android:layout_marginTop="11.5dp"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/commonview_color_3B445C"
+        android:textSize="@dimen/global_text_size_level_6"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/service_helper_title" />
+
+    <View
+        android:id="@+id/bottom_holder_view"
+        android:layout_width="match_parent"
+        android:layout_height="11.5dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/expand_service_tv"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

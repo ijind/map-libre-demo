@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/CommonView_TV_H2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:layout_marginBottom="@dimen/dimens_10dp"
+        android:text="@string/biz_order_payment_title" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_10dp"
+        android:layout_marginBottom="@dimen/dimens_10dp"
+        android:paddingStart="@dimen/dimens_16dp">
+
+        <TextView
+            android:id="@+id/biz_car_number"
+            style="@style/CommonView_TV_H1"
+            android:text="18-81160" />
+
+        <TextView
+            android:id="@+id/biz_car_color"
+            style="@style/CommonView_TV_DESC_Gray"
+            android:layout_below="@id/biz_car_number"
+            android:layout_marginTop="@dimen/dimens_2dp"
+            android:text="White" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_car_white_body" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/biz_car_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimens_16dp"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tv_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimens_8dp"
+                android:text="AED" />
+
+            <ai.txai.common.widget.txaitextview.TxaiTextView
+                android:id="@+id/tv_amount"
+                style="@style/CommonView_TV_H1"
+                app:txaiFontStyle="txaiBold"
+                android:text="65.26" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_receipt_details"
+            style="@style/CommonView_TV_DESC_Gray"
+            android:layout_below="@id/ll_account"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimens_16dp"
+            android:drawableEnd="@drawable/ic_more"
+            android:text="@string/biz_order_receipt_details" />
+    </RelativeLayout>
+
+    <View style="@style/CommonView_one_Line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimens_16dp">
+
+        <TextView
+            style="@style/CommonView_TV_DESC_Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/biz_order_payment_method_title" />
+
+        <TextView
+            android:id="@+id/tv_pay_method"
+            style="@style/CommonView_TV_DESC_Gray"
+            android:drawableEnd="@drawable/ic_more"
+            android:text="@string/biz_order_payment_method_default" />
+
+    </LinearLayout>
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/bottom_has_no_pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginBottom="@dimen/dimens_20dp"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:positiveText="@string/biz_order_pay_now"/>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        consumerProguardFiles "consumer-rules.pro"
+
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    def dep = rootProject.ext.dependencies
+    def support = rootProject.ext.support
+
+    implementation 'androidx.lifecycle:lifecycle-process:2.3.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    api dep.okhttp
+    api dep.okhttp-logging
+    api dep.retrofit
+    api dep.glide
+    api dep.glideTransformation
+    api dep.netty
+    debugApi dep.leakcanary
+    api dep.arouterApi
+    annotationProcessor dep.arouterCompiler
+
+    api support.lifecycleExtensions
+    annotationProcessor support.lifecycleCompiler
+
+    api dep.rxandroid
+    api dep.rxjava
+    api dep.rxjavaAdapter
+    api dep.converterGson
+    api dep.okhttpLogging
+    api dep.rxpermissions
+    api dep.rxlifecycle
+    api dep.rxlifecycleAndroid
+    api dep.rxlifecycleComponents
+    api dep.rxbinding
+
+    api dep.kotlinxCoroutines
+
+    api dep.immersionbar
+
+    api dep.xPopup
+    api dep.gson
+    api dep.multidex
+
+    api dep.elvishewXLog
+    api project(':CommonView')
+    api project(':DataBase')
+
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+}

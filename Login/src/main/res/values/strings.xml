@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_welcome">Welcome to TXAI</string>
+    <string name="login_phone_hint">Enter your phone number</string>
+    <string name="login_continue">Continue</string>
+    <string name="login_enter_sms_code">Enter verification code</string>
+    <string name="login_resend_code">Resend</string>
+    <string name="login_sms_code_sent">Verification code sent</string>
+    <string name="login_sms_code_not_sent">Verification code not sent</string>
+    <string name="login_login_success">Logged in</string>
+    <string name="login_login_failed">login failed, please try again later.</string>
+    <string name="login_no_phone_prompt">please enter the correct phone number</string>
+    <string name="login_wrong_number_prompt">please enter the correct phone number</string>
+</resources>

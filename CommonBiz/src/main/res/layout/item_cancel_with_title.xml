@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:paddingStart="@dimen/dimens_16dp"
+    android:paddingTop="@dimen/dimens_16dp"
+    android:paddingEnd="@dimen/dimens_12dp"
+    android:paddingBottom="@dimen/dimens_16dp">
+
+
+    <ai.txai.common.widget.txaitextview.TxaiTextView
+        android:id="@+id/tv_cancel_title"
+        style="@style/CommonView_TV_H2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:txaiFontStyle="txaiBold"
+        android:text="@string/biz_waiting_notice"/>
+
+
+    <ai.txai.common.widget.txaiButton.TxaiButton
+        android:id="@+id/tv_cancel_text"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        app:button_level="level_3"
+        app:button_type="negative_button"
+        app:negativeText="@string/commonview_cancel"/>
+
+</LinearLayout>

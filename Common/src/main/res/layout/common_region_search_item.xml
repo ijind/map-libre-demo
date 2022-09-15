@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"/>
+
+    <TextView
+        android:id="@+id/region_country_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textSize="@dimen/global_text_size_level_5"
+        android:textColor="@color/commonview_black_normal"
+        app:layout_constraintStart_toEndOf="@id/guideline_start" />
+
+    <TextView
+        android:id="@+id/region_country_code_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:textSize="@dimen/global_text_size_level_5"
+        android:textColor="@color/commonview_black_normal"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

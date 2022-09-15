@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_site_info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_all_corner_shape_white_29"
+    android:paddingStart="@dimen/dimens_15dp"
+    android:paddingTop="@dimen/dimens_8dp"
+    android:paddingEnd="@dimen/dimens_12dp"
+    android:elevation="@dimen/dimens_6dp"
+    android:paddingBottom="@dimen/dimens_10dp">
+
+    <TextView
+        android:id="@+id/site_name"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        tools:text="Hilton" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toTopOf="@id/site_name"
+        app:layout_constraintStart_toEndOf="@id/site_name"
+        app:layout_constraintTop_toBottomOf="@id/site_name"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

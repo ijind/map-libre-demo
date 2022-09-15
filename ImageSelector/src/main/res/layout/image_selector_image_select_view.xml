@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/go_albums_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top">
+
+        <ImageView
+            android:id="@+id/open_albums_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="12dp"
+            android:src="@mipmap/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/image_selector_albums_tv"
+            style="@style/CommonView_TV_H4"
+            android:text="@string/image_selector_albums"
+            app:layout_constraintBottom_toBottomOf="@id/open_albums_img"
+            app:layout_constraintStart_toEndOf="@id/open_albums_img"
+            app:layout_constraintTop_toTopOf="@id/open_albums_img" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/image_selector_title_tv"
+        style="@style/CommonView_TV_DESC"
+        android:textColor="@color/commonview_black_normal"
+        android:textSize="@dimen/global_text_size_level_4"
+        android:text="@string/image_selector_all_image"
+        app:layout_constraintBottom_toBottomOf="@id/go_albums_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/go_albums_layout" />
+
+    <TextView
+        android:id="@+id/image_selector_back_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/commonview_orange_00"
+        android:textSize="@dimen/global_text_size_level_5"
+        android:text="@string/commonview_cancel"
+        app:layout_constraintTop_toTopOf="@id/go_albums_layout"
+        app:layout_constraintBottom_toBottomOf="@id/go_albums_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dimens_16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/commonview_black_normal"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintTop_toBottomOf="@id/go_albums_layout" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9e111212"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/rv_image"/>
+
+    <View
+        android:id="@+id/masking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#c4111212"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/rv_image"
+        app:layout_constraintTop_toTopOf="@id/rv_image" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_folder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:overScrollMode="never"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/rv_image"
+        app:layout_constraintTop_toTopOf="@id/rv_image" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:background="@color/commonview_black_28"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_folder_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/dimens_16dp"
+            android:paddingEnd="@dimen/dimens_16dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/global_text_size_level_5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_selector_text_indicator"
+            app:layout_constraintBottom_toBottomOf="@id/tv_folder_name"
+            app:layout_constraintEnd_toEndOf="@id/tv_folder_name" />
+
+        <TextView
+            android:id="@+id/tv_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minWidth="70dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/image_selector_preview"
+            android:textColor="@color/white"
+            android:textSize="@dimen/global_text_size_level_5"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/preview_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/dimens_16dp"
+            android:textColor="@color/commonview_grey_c3"
+            android:text="@string/image_selector_preview"
+            android:textSize="@dimen/global_text_size_level_5"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ai.txai.common.widget.txaiButton.TxaiButton
+            android:id="@+id/image_selector_confirm"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:button_level="level_2"
+            android:layout_marginEnd="@dimen/dimens_16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

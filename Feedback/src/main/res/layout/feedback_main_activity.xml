@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/feedback_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_44dp"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:src="@mipmap/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ai.txai.common.widget.txaitextview.TxaiTextView
+            android:id="@+id/toolbar_title_tv"
+            style="@style/CommonView_TV_H3"
+            app:txaiFontStyle="txaiBold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/feedback_back_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/feedback_back_img" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/big_title"
+        layout="@layout/common_recycler_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title_layout"
+        android:layout_marginStart="@dimen/dimens_20dp"/>
+
+    <ai.txai.common.widget.ItemWithArrowLayout
+        android:id="@+id/feedback_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        app:arrowVisible="true"
+        app:itemTitle="@string/feedback_send"
+        app:itemTitleColor="@color/commonview_black_27"
+        app:itemTitleSize="@dimen/global_text_size_level_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/big_title" />
+
+    <ai.txai.common.widget.ItemWithArrowLayout
+        android:id="@+id/feedback_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:arrowVisible="true"
+        app:itemTitle="@string/feedback_report"
+        app:itemTitleColor="@color/commonview_black_27"
+        app:itemTitleSize="@dimen/global_text_size_level_5"
+        android:layout_marginStart="@dimen/dimens_20dp"
+        android:layout_marginEnd="@dimen/dimens_20dp"
+        app:layout_constraintTop_toBottomOf="@id/feedback_send" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ai.txai.common.widget.popupview.CommonLoadingStatusView
+        android:id="@+id/status_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

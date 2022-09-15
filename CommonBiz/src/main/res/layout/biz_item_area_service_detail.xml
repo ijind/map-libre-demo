@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/commonview_corner_shape_15_no_shawndow"
+    android:paddingTop="@dimen/dimens_16dp">
+
+
+    <ai.txai.common.widget.txaiimageview.RoundImageView
+        android:id="@+id/iv_area_big"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:background="@drawable/commonview_all_corner_shape_15"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/iv_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_area_big"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:src="@drawable/ic_biz_service_detail_area" />
+
+    <TextView
+        android:id="@+id/tv_area_title"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_alignBottom="@id/iv_area"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:textSize="@dimen/global_text_size_level_5"
+        android:layout_toEndOf="@id/iv_area"
+        android:text="@string/biz_service_area" />
+
+    <TextView
+        android:id="@+id/tv_area_desc"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_alignBottom="@id/iv_area"
+        android:layout_marginStart="@dimen/dimens_10dp"
+        android:textSize="@dimen/global_text_size_level_5"
+        android:layout_toEndOf="@id/tv_area_title"
+        android:text="Yas Island" />
+
+
+    <ImageView
+        android:id="@+id/iv_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_area"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:src="@drawable/ic_biz_service_hours" />
+
+    <TextView
+        android:id="@+id/tv_hours_title"
+        style="@style/CommonView_TV_DESC_14sp_Gray"
+        android:layout_alignBottom="@id/iv_hours"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:textSize="@dimen/global_text_size_level_5"
+        android:layout_toEndOf="@id/iv_hours"
+        android:text="@string/biz_service_hours" />
+
+    <TextView
+        android:id="@+id/tv_hours_desc"
+        style="@style/CommonView_TV_DESC_14sp_Black"
+        android:layout_alignBottom="@id/iv_hours"
+        android:layout_marginStart="@dimen/dimens_10dp"
+        android:textSize="@dimen/global_text_size_level_5"
+        android:layout_toEndOf="@id/tv_hours_title"
+        android:text="08:00 AM - 08:00 PM" />
+
+    <View
+        android:id="@+id/bottom_line"
+        style="@style/CommonView_one_Line"
+        android:layout_below="@id/tv_hours_desc"
+        android:layout_marginTop="@dimen/dimens_16dp" />
+
+</RelativeLayout>
